@@ -1,0 +1,37 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+.login-container{
+    padding: 15px;
+}
+.login-panel{
+    margin:  45px auto;
+    background-color: white;
+    border: 1px solid #ABB2B9;
+    padding: 0;
+    box-shadow: 1px 3px 3px 0 #ABB2B9;
+}
+.login-head{
+    background-color: #A9CCE3;
+    border-bottom: 1px solid #ABB2B9;
+    padding: 8px;
+    font-size: small;
+}
+.login-head h4 {
+    color: #2C3E50;
+    font-size: 17px;
+}
+.login-body{
+    padding: 10px 40px 60px 40px;
+    font-size: 15px;
+    color: #424949;
+}
+.form-group .input-group input.form-control{
+    height: 33px;
+}
+.form-group .input-group input.form-control::placeholder{
+    font-size: small;
+}
+.forgot-password{
+    margin-bottom: 10px;
+}
