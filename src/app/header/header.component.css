@@ -1,0 +1,24 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+nav {
+    font-size: small;
+    background-color: #2E557B;
+    margin: 0 auto;
+    border-bottom: 2px solid orange;
+}
+.navbar a.navbar-brand{
+    font-size: small;
+    color: white;
+    text-transform: capitalize;
+}
+.navbar-collapse ul.navbar-nav li.nav-item a.nav-link{
+    color: white;
+}
+.navbar-collapse ul.navbar-nav{
+    margin-left: 50%;
+}
+.navbar-collapse li.dropdown button{
+    padding: 5px;
+    font-size: small;
+}
