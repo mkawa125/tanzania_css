@@ -19,15 +19,16 @@
 }
 .login-head h4 {
     color: #2C3E50;
-    font-size: 17px;
+    font-size: 15px;
 }
 .login-body{
     padding: 10px 40px 60px 40px;
-    font-size: 15px;
+    font-size: small;
     color: #424949;
 }
 .form-group .input-group input.form-control{
     height: 33px;
+    font-size: small;
 }
 .form-group .input-group input.form-control::placeholder{
     font-size: small;

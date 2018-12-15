@@ -1,27 +1,32 @@
-<div class="login-container">
+<div class="login-container" id="login-container">
   <div class="col-sm-4 login-panel">
     <div class="login-head"><h4>Please Login</h4></div>
       <div class="login-body">
-          <form class="login-form" action="" type="form" enctype="multipart/form-data">
+          <form [formGroup]="formData" (ngSubmit) = "onClickSubmit(formData.value)">
               <div class="form-group">
-                  <label for="index-number">Index Number:</label>
+                  <label for="indexNumber">Index Number:</label>
                   <div class="input-group">
-                      <input id="index-number" type="text" name="index-number" class="form-control" placeholder="s1968.0048.2012">
+                      <input id="indexNumber" type="text" name="indexNUmber"
+                             formControlName="indexNumber" class="form-control" placeholder="s1968.0048.2012">
                   </div>
               </div>
               <div class="form-group">
                   <label for="password">Password:</label>
                   <div class="input-group">
-                      <input id="password" type="password" name="password" class="form-control" placeholder="Enter password">
+                      <input id="password" type="password" name="password"
+                             formControlName="password" class="form-control" placeholder="Enter password">
                   </div>
               </div>
               <div class="forgot-password">
                   <a routerLink="reset-password" >forgot password?</a>
               </div>
-              <button routerLink="/home"  class="btn btn-dark btn-block" type="submit" style="padding: 5px; float: right; font-size: 16px">
-                  Login
+              <button  value="login" type="submit" class="btn btn-dark btn-block"
+                       [disabled]="!formData.valid"
+                       style="padding: 5px; float: right; font-size: 15px">
+                  Login <i class="fa fa-sign-in"></i>
               </button>
           </form>
       </div>
   </div>
 </div>
+<app-footer></app-footer>

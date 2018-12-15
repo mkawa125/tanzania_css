@@ -1,36 +1,73 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-.login-container{
-    padding: 15px;
+app-home-component{
+    overflow: auto;
 }
-.login-panel{
-    margin:  45px auto;
-    background-color: white;
-    border: 1px solid #ABB2B9;
+.carousel-panel{
     padding: 0;
-    box-shadow: 1px 3px 3px 0 #ABB2B9;
 }
-.login-head{
-    background-color: #A9CCE3;
-    border-bottom: 1px solid #ABB2B9;
-    padding: 8px;
+.home-links{
+    padding: 10px;
+    background-color: #CCD1D1;
+    border-bottom: 2px solid #99A3A4;
+
+}
+.home-links h4{
     font-size: small;
+    text-align: center;
 }
-.login-head h4 {
-    color: #2C3E50;
-    font-size: 17px;
+.quick-links{
+    background-color: whitesmoke;
+    min-height: 205px;
+    border-bottom: 1px solid #CCD1D1;
 }
-.login-body{
-    padding: 10px 40px 60px 40px;
-    font-size: 15px;
+.quick-links ul{
+    padding: 5px;
+}
+.quick-links ul li{
+    list-style-type: none;
+    padding: 2px;
+}
+.quick-links ul li a{
+    font-size: small;
+    text-decoration: none;
+    padding: 5px;
+}
+.quick-links ul li a:hover{
+    color: orangered;
+}
+
+.general-head{
+    padding: 10px;
+    background-color: #FA8072;
+    border-bottom: 2px solid #138D75;
+
+}
+.general-head h4{
+    font-size: small;
+    text-align: center;
+}
+.general-news{
+    background-color: whitesmoke;
+    min-height: 205px;
+    border-bottom: 1px solid #CCD1D1;
+    font-size: small;
+
+}
+.general-news .row{
+    padding: 5px;
+}
+.general-news .date small{
+    color: red;
+    padding: 5px;
+}
+.general-news  a{
     color: #424949;
 }
-.form-group .input-group input.form-control{
-    height: 33px;
+.new-icon{
+    width: 30px;
+
 }
-.form-group .input-group input.form-control::placeholder{
-    font-size: small;
-}
-.forgot-password{
-    margin-bottom: 10px;
+.news-links{
+    border-bottom: 1px solid #CCD1D1;
 }
