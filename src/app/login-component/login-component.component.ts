@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import {Router} from '@angular/router';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-login-component',
@@ -35,6 +38,10 @@ export class LoginComponentComponent implements OnInit {
         alert('Invalid Login');
         return false;
     }
+
+  constructor() { }
+
+  ngOnInit() {
   }
 
 }

@@ -34,6 +34,17 @@ const AppRoutes: Routes = [
       FooterComponent,
       MainComponent,
       HeaderComponent,
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { HeaderComponentComponent } from './header-component/header-component.component';
+import { FooterComponentComponent } from './footer-component/footer-component.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponentComponent,
+    HeaderComponentComponent,
+    FooterComponentComponent
+
   ],
   imports: [
       BrowserModule,
