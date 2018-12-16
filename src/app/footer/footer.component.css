@@ -1,0 +1,17 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+footer{
+    font-size: small;
+    color: #99A3A4;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+.footer-body{
+    padding: 10px;
+    font-size: small;
+}
+.footer-address{
+    font-size: small;
+}
