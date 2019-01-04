@@ -35,6 +35,14 @@ const AppRoutes: Routes = [
 //         ]
 //     }
 // ];
+
+ // Defining routes
+const AppRoutes: Routes = [
+    { path: '' , component: LoginComponentComponent},
+    { path: 'home' , component: HomeComponentComponent},
+    { path: 'reset-password', component: PasswordResetComponent},
+];
+
 @NgModule({
   declarations: [
       AppComponent,
