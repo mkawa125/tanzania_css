@@ -31,6 +31,7 @@ export class LoginComponentComponent implements OnInit {
     console.log(inputData.indexNumber);
     if (inputData.indexNumber === 'admin' && inputData.password === '123456') {
       // alert('login successfully');
+      this.router.navigate(['']);
       this.router.navigate(['home']);
         document.getElementById('login-container').style.display = '';
         document.getElementById('home-container').style.display = '';
