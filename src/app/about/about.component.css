@@ -1,0 +1,25 @@
+.about-head{
+    margin-top: 15px;
+}
+.about-head h4{
+    font-size: 15px;
+    color: #383939;
+    font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+    font-weight: bold;
+}
+.about-body{
+    font-size: 13px;
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #616A6B;
+}
+.about-body h5{
+    font-size: small;
+    font-family: 'Andika', sans-serif;
+    color: #4F929A;
+    font-weight: bold;
+}
+.paragraph{
+    text-align: justify;
+    line-height: 25px;
+}

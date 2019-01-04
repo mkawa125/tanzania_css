@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
   constructor() { }
-
+  tanzania_flag = '../assets/images/flag-tz.tmp';
   ngOnInit() {
   }
 
