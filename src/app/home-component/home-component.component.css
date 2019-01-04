@@ -17,7 +17,7 @@ app-home-component{
     text-align: center;
 }
 .quick-links{
-    background-color: whitesmoke;
+    background-color: #B7C8E3;
     min-height: 205px;
     border-bottom: 1px solid #CCD1D1;
 }
@@ -32,6 +32,7 @@ app-home-component{
     font-size: small;
     text-decoration: none;
     padding: 5px;
+    color: #424949;
 }
 .quick-links ul li a:hover{
     color: orangered;
@@ -48,7 +49,7 @@ app-home-component{
     text-align: center;
 }
 .general-news{
-    background-color: whitesmoke;
+    background-color: #A2D9CE;
     min-height: 205px;
     border-bottom: 1px solid #CCD1D1;
     font-size: small;
@@ -70,4 +71,16 @@ app-home-component{
 }
 .news-links{
     border-bottom: 1px solid #CCD1D1;
+}
+.instructions{
+    background-color: #D6EAF8;
+    min-height: 170px;
+    padding: 15px;
+    font-size: small;
+    border-top: 3px solid #A569BD;
+    box-shadow: 1px 3px 3px 0 #CCD1D1;
+    color: #616A6B;
+}
+.instructions ol li{
+    margin-bottom: 10px;
 }

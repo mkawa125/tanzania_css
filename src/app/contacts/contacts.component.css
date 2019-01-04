@@ -1,0 +1,67 @@
+.contact-head h4{
+    font-size: medium;
+    color: orange;
+    margin-top: 15px;
+}
+.contact-head{
+    border-bottom: 1px solid #CCD1D1;
+}
+.message{
+    font-size: small;
+    border-left: 1px dotted #566573;
+    margin-bottom: 15px;
+    padding: 8px;
+}
+.map{
+    font-size: small;
+    border-left: 1px dotted #566573;
+    margin-bottom: 15px;
+    padding: 8px;
+}
+.input-group input{
+    border-radius: 0;
+    height: 35px;
+    font-size: small;
+}
+.input-group input.form-control::placeholder{
+    font-size: small;
+}
+.input-group textarea{
+    border-radius: 0;
+    font-size: small;
+}
+.input-group textarea.form-control::placeholder{
+    font-size: small;
+}
+.message-form{
+    padding-bottom: 25px;
+}
+.contacts{
+    font-size: small;
+    margin-top: 25px;
+    padding-left: 0;
+}
+.contacts h4{
+    font-size: small;
+    font-weight: bold;
+    color: orange;
+}
+.contacts ul{
+    list-style-type: none;
+    padding: 0;
+    color: #566573;
+}
+.contacts ul li{
+    margin-bottom: 5px;
+    font-size: small;
+}
+.contacts ul li i{
+    margin-right: 5px;
+}
+.contacts ul li i.fa-at{
+    background-color: #566573;
+    color: white;
+    font-size: 10px;
+    padding: 2px;
+    border-radius: 2px
+}

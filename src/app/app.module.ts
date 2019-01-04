@@ -16,14 +16,25 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { AboutComponent } from './about/about.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
  // Defining routes
 const AppRoutes: Routes = [
-    { path: '' , component: LoginComponentComponent},
-    { path: 'home' , component: HomeComponentComponent},
+    { path: '' , component: HomeComponentComponent},
+    { path: 'login' , component: LoginComponentComponent},
     { path: 'reset-password', component: PasswordResetComponent},
+    { path: 'about' , component: AboutComponent},
+    { path: 'contacts', component: ContactsComponent}
 ];
 
+// const ChildRoutes: Routes = [
+//     { path: 'about', component: AboutComponent,
+//         children: [
+//             { path: 'login', component: LoginComponentComponent}
+//         ]
+//     }
+// ];
 @NgModule({
   declarations: [
       AppComponent,
@@ -34,6 +45,9 @@ const AppRoutes: Routes = [
       FooterComponent,
       MainComponent,
       HeaderComponent,
+      AboutComponent,
+      ContactsComponent,
+
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
@@ -49,6 +63,7 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
   imports: [
       BrowserModule,
       RouterModule.forRoot(AppRoutes),
+      RouterModule.forChild(AppRoutes),
       BrowserAnimationsModule,
       FormsModule,
       ReactiveFormsModule,
