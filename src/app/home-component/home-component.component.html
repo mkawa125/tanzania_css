@@ -1,82 +1,53 @@
 <app-main>
-   <div class="col-sm-9" style="margin: 0 auto; background-color: white">
-      <div class="row" style="padding: 15px">
-          <div class="col-sm-3">
-              <div class="home-links">
-                  <h4>Quick Links</h4>
-              </div>
-              <div class="quick-links">
-                  <ul>
-                      <li>
-                          <a href="http://www.tamisemi.go.tz/" target="_blank" title="Tawala za mikoa na serikali za mitaa">
-                          Tamisemi
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://www.necta.go.tz/" target="_blank" title="National examination council of tanzania">
-                              Necta
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://www.tanzania.go.tz/" target="_blank" title="Tanzania official national website">
-                              National Website
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://www.moez.go.tz/" target="_blank" title="Ministry of education zanzibar">
-                              MoEZ
-                          </a>
-                      </li>
-                      <li>
-                          <a href="http://www.moe.go.tz" target="_blank" title="Ministry of education science and technology in tanzania">
-                              MoE
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-         <div class="col-sm-6 carousel-panel">
-             <carousel >
-                 <slide *ngFor="let slide of slides">
-                     <img src="{{ slide.img}}" alt="image slide" class="slide-image" style="display: block; width: 100%; height: 250px">
-                 </slide>
-             </carousel>
-         </div>
-
-          <div class="col-sm-3">
-              <div class="general-head">
-                  <h4>General News</h4>
-              </div>
-              <div class="general-news">
-                  <div class="row">
-                      <div class="col-sm-2 date">
-                          <img src="{{ red_fire}}" class="new-icon">
-
-                      </div>
-                      <div class="col-sm-10">
-                          <a routerLink="">
-                              General information about form four application
-                          </a>
-                          <small style="color: #CCD1D1">20, oct</small>
-                      </div>
+   <div class="col-sm-9" style="margin: 0 auto; background-color: whitesmoke">
+      <div class="row" style="padding: 25px">
+          <div class="col-sm-12">
+              <div class="row" style="background-color: white; padding: 15px">
+                  <div class="col-sm-8 carousel-panel" style="padding: 0 15px 5px 15px">
+                      <carousel >
+                          <slide *ngFor="let slide of slides">
+                              <img src="{{ slide.img}}" alt="image slide" class="slide-image" style="display: block; width: 100%; height: 250px">
+                          </slide>
+                      </carousel>
                   </div>
 
-                  <div class="row">
-                      <div class="col-sm-2 date">
-                          <img src="{{ red_fire}}" class="new-icon">
-
+                  <div class="col-sm-4">
+                      <div class="general-head">
+                          <h4>General News</h4>
                       </div>
-                      <div class="col-sm-10">
-                          <a routerLink="">
-                              General information about form four application
-                          </a>
-                          <small style="color: #CCD1D1">20, oct</small>
+                      <div class="general-news">
+                          <div class="row">
+                              <div class="col-sm-2 date">
+                                  <img src="{{ red_fire}}" class="new-icon">
+
+                              </div>
+                              <div class="col-sm-10">
+                                  <a routerLink="">
+                                      General information about form four application
+                                  </a>
+                                  <small style="color: #CCD1D1">20, oct</small>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-sm-2 date">
+                                  <img src="{{ red_fire}}" class="new-icon">
+
+                              </div>
+                              <div class="col-sm-10">
+                                  <a routerLink="">
+                                      General information about form four application
+                                  </a>
+                                  <small style="color: #CCD1D1">20, oct</small>
+                              </div>
+                          </div>
+
                       </div>
                   </div>
-
+              </div>
               </div>
           </div>
-      </div>
+
 
        <div class="row" style="padding: 15px">
            <div class="col-sm-12 ">
