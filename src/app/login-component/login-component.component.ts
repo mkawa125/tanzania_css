@@ -34,10 +34,11 @@ export class LoginComponentComponent implements OnInit {
   onClickSubmit(inputData) {
     console.log(inputData.indexNumber);
     if (inputData.indexNumber === 'admin' && inputData.password === '123456') {
-      // alert('login successfully');
+        alert('login successfully');
         this.toast.success('Login Successfully', 'Success', {
             timeOut: 2000,
-            positionClass: 'toast-top-right'
+            positionClass: 'toast-top-right',
+            messageClass: 'text-success'
         });
       this.router.navigate(['']);
         document.getElementById('login-container').style.display = '';

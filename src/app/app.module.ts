@@ -4,6 +4,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { ToastrModule} from 'ngx-toastr';
 import { HttpClientModule} from '@angular/common/http';
 import { MyServiceService} from './my-service.service';
+import { HttpModule} from '@angular/http';
 
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -57,7 +58,8 @@ const AppRoutes: Routes = [
           preventDuplicates: true,
       }),
       CarouselModule.forRoot(),
-      HttpClientModule
+      HttpClientModule,
+      HttpModule,
   ],
   providers: [MyServiceService],
   bootstrap: [AppComponent]
