@@ -41,7 +41,7 @@ app-home-component{
 
 .general-head{
     padding: 10px;
-    background-color: #FA8072;
+    background-color: #A2D9CE;
     border-bottom: 2px solid #138D75;
 
 }
@@ -50,11 +50,12 @@ app-home-component{
     text-align: center;
 }
 .general-news{
-    background-color: #A2D9CE;
-    background-color: whitesmoke;
+    background-color: white;
     min-height: 205px;
-    border-bottom: 1px solid #CCD1D1;
+    border: 1px solid #CCD1D1;
     font-size: small;
+    box-shadow: 0 2px 2px 0 #99A3A4;
+
 
 }
 .general-news .row{
@@ -75,12 +76,12 @@ app-home-component{
     border-bottom: 1px solid #CCD1D1;
 }
 .instructions{
-    background-color: #D6EAF8;
+    background-color: white;
     min-height: 170px;
     padding: 15px;
     font-size: small;
-    border-top: 3px solid #A569BD;
-    box-shadow: 1px 3px 3px 0 #CCD1D1;
+    border-top: 2px solid silver;
+    box-shadow: 1px 3px 3px 1px #CCD1D1;
     color: #616A6B;
 }
 .instructions ol li{

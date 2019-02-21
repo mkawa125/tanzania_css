@@ -1,3 +1,5 @@
+@import "~ngx-toastr/toastr.css";
+
 .contact-head h4{
     font-size: medium;
     color: orange;
@@ -64,4 +66,10 @@
     font-size: 10px;
     padding: 2px;
     border-radius: 2px
+}
+.toast-message{
+    font-size: small;
+}
+.messageBody{
+    font-size: small;
 }
