@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
+import { ToastrModule} from 'ngx-toastr';
+import { HttpClientModule} from '@angular/common/http';
+import { MyServiceService} from './my-service.service';
+import { HttpModule} from '@angular/http';
 
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -27,6 +31,7 @@ const AppRoutes: Routes = [
     { path: 'about' , component: AboutComponent},
     { path: 'contacts', component: ContactsComponent}
 ];
+
 
 // const ChildRoutes: Routes = [
 //     { path: 'about', component: AboutComponent,
@@ -76,9 +81,15 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
       FormsModule,
       ReactiveFormsModule,
       SlickModule,
-      CarouselModule.forRoot()
+      ToastrModule.forRoot({
+          timeOut: 2000,
+          preventDuplicates: true,
+      }),
+      CarouselModule.forRoot(),
+      HttpClientModule,
+      HttpModule,
   ],
-  providers: [],
+  providers: [MyServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
