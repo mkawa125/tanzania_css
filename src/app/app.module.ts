@@ -32,6 +32,22 @@ const AppRoutes: Routes = [
     { path: 'contacts', component: ContactsComponent}
 ];
 
+
+// const ChildRoutes: Routes = [
+//     { path: 'about', component: AboutComponent,
+//         children: [
+//             { path: 'login', component: LoginComponentComponent}
+//         ]
+//     }
+// ];
+
+ // Defining routes
+const AppRoutes: Routes = [
+    { path: '' , component: LoginComponentComponent},
+    { path: 'home' , component: HomeComponentComponent},
+    { path: 'reset-password', component: PasswordResetComponent},
+];
+
 @NgModule({
   declarations: [
       AppComponent,
@@ -44,6 +60,18 @@ const AppRoutes: Routes = [
       HeaderComponent,
       AboutComponent,
       ContactsComponent,
+
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { HeaderComponentComponent } from './header-component/header-component.component';
+import { FooterComponentComponent } from './footer-component/footer-component.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponentComponent,
+    HeaderComponentComponent,
+    FooterComponentComponent
+
   ],
   imports: [
       BrowserModule,

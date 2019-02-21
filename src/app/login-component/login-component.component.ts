@@ -5,6 +5,8 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 
+
+
 @Component({
   selector: 'app-login-component',
   templateUrl: './login-component.component.html',
@@ -41,6 +43,7 @@ export class LoginComponentComponent implements OnInit {
             messageClass: 'text-success'
         });
       this.router.navigate(['']);
+      this.router.navigate(['home']);
         document.getElementById('login-container').style.display = '';
         document.getElementById('home-container').style.display = '';
     } else {
@@ -50,6 +53,10 @@ export class LoginComponentComponent implements OnInit {
         });
         return false;
     }
+
+  constructor() { }
+
+  ngOnInit() {
   }
 
 }
