@@ -1,7 +1,6 @@
 export class Contacts {
-    id: number;
-    message_body: string;
-    email: string;
-    subject: string;
+    messageBody: string;
+    emailAddress: string;
+    messageSubject: string;
     fullNames: string;
 }

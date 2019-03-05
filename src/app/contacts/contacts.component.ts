@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
-import { FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators, FormBuilder} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
 import { Contacts} from '../contacts';
-
-declare const google: any;
+import { ContactUsService } from '../contact-us.service';
 
 @Component({
   selector: 'app-contacts',
@@ -21,6 +20,8 @@ export class ContactsComponent implements OnInit {
     constructor(
         private router: Router,
         private toast: ToastrService,
+        private  fb: FormBuilder,
+        private  cs: ContactUsService,
     ) {
     }
 
@@ -46,6 +47,16 @@ export class ContactsComponent implements OnInit {
                 Validators.maxLength(1000),
             ]))
         });
+    }
+    sendMessage(messageData) {
+        // alert(messageData.messageBody)
+        const that = this;
+        const data = that.cs.sendMessageData(messageData);
+        if (data) {
+            alert('server reached successfully');
+        } else {
+            alert('server is unreachable');
+        }
     }
 }
 
