@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import { FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
-import { Http, Headers} from '@angular/http';
 import { Contacts} from '../contacts';
-import { promise} from 'selenium-webdriver';
 
 declare const google: any;
 
@@ -24,7 +21,6 @@ export class ContactsComponent implements OnInit {
     constructor(
         private router: Router,
         private toast: ToastrService,
-        private http: Http,
     ) {
     }
 
@@ -50,14 +46,6 @@ export class ContactsComponent implements OnInit {
                 Validators.maxLength(1000),
             ]))
         });
-    }
-
-    onClickSendMessage(formData) {
-        alert(formData.fullNames);
-        return this.http.post('http://127.0.0.1:8000/api/contacts', JSON.stringify(formData.value), {headers: this.headers})
-            .toPromise()
-            .then(res => res.json().data)
-            .catch(Error);
     }
 }
 

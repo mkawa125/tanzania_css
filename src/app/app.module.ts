@@ -5,13 +5,15 @@ import { ToastrModule} from 'ngx-toastr';
 import { HttpClientModule} from '@angular/common/http';
 import { MyServiceService} from './my-service.service';
 import { HttpModule} from '@angular/http';
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { HeaderComponentComponent } from './header-component/header-component.component';
+import { FooterComponentComponent } from './footer-component/footer-component.component';
 
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SlickModule} from 'ngx-slick';
 
 // importing components
-import { LoginComponentComponent } from './login-component/login-component.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
@@ -32,25 +34,13 @@ const AppRoutes: Routes = [
     { path: 'contacts', component: ContactsComponent}
 ];
 
-
-// const ChildRoutes: Routes = [
-//     { path: 'about', component: AboutComponent,
-//         children: [
-//             { path: 'login', component: LoginComponentComponent}
-//         ]
-//     }
-// ];
-
- // Defining routes
-const AppRoutes: Routes = [
-    { path: '' , component: LoginComponentComponent},
-    { path: 'home' , component: HomeComponentComponent},
-    { path: 'reset-password', component: PasswordResetComponent},
-];
-
 @NgModule({
   declarations: [
-      AppComponent,
+        AppComponent,
+        LoginComponentComponent,
+        HeaderComponentComponent,
+        FooterComponentComponent,
+        AppComponent,
       LoginComponentComponent,
       HomeComponentComponent,
       PasswordResetComponent,
@@ -60,17 +50,6 @@ const AppRoutes: Routes = [
       HeaderComponent,
       AboutComponent,
       ContactsComponent,
-
-import { LoginComponentComponent } from './login-component/login-component.component';
-import { HeaderComponentComponent } from './header-component/header-component.component';
-import { FooterComponentComponent } from './footer-component/footer-component.component';
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponentComponent,
-    HeaderComponentComponent,
-    FooterComponentComponent
 
   ],
   imports: [
@@ -86,8 +65,6 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
           preventDuplicates: true,
       }),
       CarouselModule.forRoot(),
-      HttpClientModule,
-      HttpModule,
   ],
   providers: [MyServiceService],
   bootstrap: [AppComponent]
