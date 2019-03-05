@@ -13,7 +13,7 @@
               <strong style="color: #566573"> <i class="fa fa-envelope"></i> Send us a message</strong>
             </div>
             <div class="message-body">
-              <form [formGroup] = "formData" class="message-form">
+              <form [formGroup] = "formData" (ngSubmit)="sendMessage(formData.value)" class="message-form">
                 <div class="row">
                   <div class="col-sm-7">
                     <div class="form-group input-group">
@@ -51,7 +51,7 @@
                     <button class="btn btn-info" [disabled]="!formData.valid" type="submit" style="float: right; padding: 4px; font-size: small; border-radius: 2px">
                       Send message <i class="fa fa-send"></i>
                     </button>
-                    <button (click)="sendMessage(formData.value)" class="btn btn-danger" type="reset" style="float: right; margin-right: 10px; padding: 4px; font-size: small; border-radius: 2px">
+                    <button class="btn btn-danger" type="reset" style="float: right; margin-right: 10px; padding: 4px; font-size: small; border-radius: 2px">
                       Clear <i class="fa fa-eraser"></i>
                     </button>
                   </div>
@@ -60,7 +60,7 @@
             </div>
           </div>
 
-          <div class="col-sm-4" style="position: absolute; right: 0">
+          <div class="col-sm-4" style="right: 0">
             <div class="map" style="background-color: #EAECEE">
               <strong style="color: #566573"><i class="fa fa-map-marker"></i> Offices information</strong>
             </div>

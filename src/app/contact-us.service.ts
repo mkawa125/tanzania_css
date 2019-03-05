@@ -9,14 +9,14 @@ export class ContactUsService {
 
   constructor(private http: HttpClient) { }
 
-  sendMessage(message_body, email, subject, fullNames) {
-    const message = {
-        message_body: message_body,
-        email: email,
-        subject: subject,
-        fullNames: fullNames,
+  sendMessageData(message) {
+    const message_object = {
+        message_body: message.messageBody,
+        email: message.emailAddress,
+        subject: message.messageSubject,
+        fullNames: message.fullNames,
     };
-      this.http.post(`${this.url}/add`, message)
+      this.http.post(`${this.url}/add`, message_object)
           .subscribe(res => console.log('Done'));
   }
 }
