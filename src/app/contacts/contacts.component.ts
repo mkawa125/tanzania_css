@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
-import { FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators, FormBuilder} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
 import { Contacts} from '../contacts';
+import {ContactUsService} from '../contact-us.service';
 
 declare const google: any;
 
@@ -21,6 +22,8 @@ export class ContactsComponent implements OnInit {
     constructor(
         private router: Router,
         private toast: ToastrService,
+        private  fb: FormBuilder,
+        private  cs: ContactUsService,
     ) {
     }
 
@@ -46,6 +49,9 @@ export class ContactsComponent implements OnInit {
                 Validators.maxLength(1000),
             ]))
         });
+    }
+    sendMessage(fullNames, emailAddress, messageSubject, messageBody) {
+        this.cs.sendMessage(fullNames, emailAddress, messageSubject, messageBody);
     }
 }
 

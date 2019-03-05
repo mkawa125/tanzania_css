@@ -13,7 +13,7 @@
               <strong style="color: #566573"> <i class="fa fa-envelope"></i> Send us a message</strong>
             </div>
             <div class="message-body">
-              <form [formGroup] = "formData" (ngSubmit) = "onClickSendMessage(formData.value)" class="message-form">
+              <form [formGroup] = "formData" class="message-form">
                 <div class="row">
                   <div class="col-sm-7">
                     <div class="form-group input-group">
@@ -51,7 +51,7 @@
                     <button class="btn btn-info" [disabled]="!formData.valid" type="submit" style="float: right; padding: 4px; font-size: small; border-radius: 2px">
                       Send message <i class="fa fa-send"></i>
                     </button>
-                    <button class="btn btn-danger" type="reset" style="float: right; margin-right: 10px; padding: 4px; font-size: small; border-radius: 2px">
+                    <button (click)="sendMessage(formData.value)" class="btn btn-danger" type="reset" style="float: right; margin-right: 10px; padding: 4px; font-size: small; border-radius: 2px">
                       Clear <i class="fa fa-eraser"></i>
                     </button>
                   </div>
