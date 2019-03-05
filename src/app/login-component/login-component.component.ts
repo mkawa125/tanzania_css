@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Injectable} from '@angular/core';
 import { Router} from '@angular/router';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
-import { HttpClient, HttpClientModule} from '@angular/common/http';
 
 
 
@@ -18,7 +16,6 @@ export class LoginComponentComponent implements OnInit {
   constructor(
       private router: Router,
       private toast: ToastrService,
-      private http: HttpClientModule,
       ) { }
   ngOnInit() {
       this.formData = new FormGroup({
@@ -34,29 +31,23 @@ export class LoginComponentComponent implements OnInit {
 
 }
   onClickSubmit(inputData) {
-    console.log(inputData.indexNumber);
-    if (inputData.indexNumber === 'admin' && inputData.password === '123456') {
-        alert('login successfully');
-        this.toast.success('Login Successfully', 'Success', {
-            timeOut: 2000,
-            positionClass: 'toast-top-right',
-            messageClass: 'text-success'
-        });
-      this.router.navigate(['']);
-      this.router.navigate(['home']);
-        document.getElementById('login-container').style.display = '';
-        document.getElementById('home-container').style.display = '';
-    } else {
-        this.toast.error('Invalid Login', 'Failed', {
-            timeOut: 2000,
-            positionClass: 'toast-top-right',
-        });
-        return false;
-    }
-
-  constructor() { }
-
-  ngOnInit() {
+      console.log(inputData.indexNumber);
+      if (inputData.indexNumber === 'admin' && inputData.password === '123456') {
+          this.toast.success('Login Successfully', 'Success', {
+              timeOut: 2000,
+              positionClass: 'toast-top-right',
+              messageClass: 'text-success'
+          });
+          this.router.navigate(['']);
+          this.router.navigate(['home']);
+          document.getElementById('login-container').style.display = '';
+          document.getElementById('home-container').style.display = '';
+      } else {
+          this.toast.error('Invalid Login', 'Failed', {
+              timeOut: 2000,
+              positionClass: 'toast-top-right',
+          });
+          return false;
+      }
   }
-
 }
