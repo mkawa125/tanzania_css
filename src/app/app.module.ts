@@ -2,9 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import { ToastrModule} from 'ngx-toastr';
-import { HttpClientModule} from '@angular/common/http';
-import { MyServiceService} from './my-service.service';
-import { HttpModule} from '@angular/http';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
@@ -66,7 +63,6 @@ const AppRoutes: Routes = [
       }),
       CarouselModule.forRoot(),
   ],
-  providers: [MyServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
