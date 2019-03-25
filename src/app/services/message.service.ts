@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
   providedIn: 'root'
 })
 export class MessageService {
-  server = 'localhost:8000';
+  server = 'localhost:8000/';
   headers: Headers = new Headers();
   options: any;
 
