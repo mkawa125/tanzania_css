@@ -33,11 +33,11 @@ const AppRoutes: Routes = [
 
 @NgModule({
   declarations: [
-        AppComponent,
-        LoginComponentComponent,
-        HeaderComponentComponent,
-        FooterComponentComponent,
-        AppComponent,
+      AppComponent,
+      LoginComponentComponent,
+      HeaderComponentComponent,
+      FooterComponentComponent,
+      AppComponent,
       LoginComponentComponent,
       HomeComponentComponent,
       PasswordResetComponent,
