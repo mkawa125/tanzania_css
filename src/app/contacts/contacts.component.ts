@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
+import { ActivatedRoute, Params, Router} from '@angular/router';
 import { FormControl, FormGroup, NgForm, Validators, FormBuilder} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
 import { Contacts} from '../contacts';
+import { MessageService} from '../services/message.service';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class ContactsComponent implements OnInit {
 
     constructor(
         private router: Router,
+        private messageService: MessageService,
         private toast: ToastrService,
         private  fb: FormBuilder,
     ) {
@@ -48,6 +50,11 @@ export class ContactsComponent implements OnInit {
         });
     }
     sendMessage(messageData) {
+        this.messageService
+            .sendMessage(this.model)
+            .subscribe(response => [
+                console.log(response)
+            ]);
     }
 }
 
