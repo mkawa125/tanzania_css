@@ -6,18 +6,19 @@ import 'rxjs/add/operator/map';
   providedIn: 'root'
 })
 export class MessageService {
-  server = 'http://127.0.0.1:8000/';
+  server = 'http://127.0.0.1:8000/api/v1/';
   headers: Headers = new Headers();
   options: any;
 
   constructor( private http: Http) {
     this.headers.append('enctype', 'multipart/form-data');
-    this.headers.append('content_type', 'application/json');
+    this.headers.append('Content-Type', 'application/json');
     this.headers.append('X-requested-width', 'XMLHttpRequest');
     this.options = new RequestOptions({headers: this.headers});
   }
   sendMessage(postData) {
     const data = JSON.stringify(postData);
+    alert(postData);
     return this.http.post(this.server + 'sendMessage', data, this.options).map(
       res => res.json()
     );

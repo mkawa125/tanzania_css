@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router} from '@angular/router';
 import { FormControl, FormGroup, NgForm, Validators, FormBuilder} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
-import { Contacts} from '../contacts';
+import { Contacts} from '../models/contacts';
+import { MessegeModel} from '../models/messegeModel';
 import { MessageService} from '../services/message.service';
 
 
@@ -27,7 +28,7 @@ export class ContactsComponent implements OnInit {
     }
 
     public headers = new Headers({'Content-Type': 'application/json'});
-    model = new Contacts();
+    message_model = new MessegeModel();
 
     ngOnInit() {
         this.formData = new FormGroup({
@@ -49,9 +50,9 @@ export class ContactsComponent implements OnInit {
             ]))
         });
     }
-    sendMessage(messageData) {
+    sendMessage(formData) {
         this.messageService
-            .sendMessage(this.model)
+            .sendMessage(formData)
             .subscribe(response => [
                 console.log(response)
             ]);
