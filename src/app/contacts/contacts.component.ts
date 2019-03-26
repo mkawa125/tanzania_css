@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
+import { ActivatedRoute, Params, Router} from '@angular/router';
 import { FormControl, FormGroup, NgForm, Validators, FormBuilder} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
-import { Contacts} from '../contacts';
-import { ContactUsService } from '../contact-us.service';
+import { Contacts} from '../models/contacts';
+import { MessegeModel} from '../models/messegeModel';
+import { MessageService} from '../services/message.service';
+
 
 @Component({
   selector: 'app-contacts',
@@ -19,14 +21,14 @@ export class ContactsComponent implements OnInit {
 
     constructor(
         private router: Router,
+        private messageService: MessageService,
         private toast: ToastrService,
         private  fb: FormBuilder,
-        private  cs: ContactUsService,
     ) {
     }
 
     public headers = new Headers({'Content-Type': 'application/json'});
-    model = new Contacts();
+    message_model = new MessegeModel();
 
     ngOnInit() {
         this.formData = new FormGroup({
@@ -48,15 +50,12 @@ export class ContactsComponent implements OnInit {
             ]))
         });
     }
-    sendMessage(messageData) {
-        // alert(messageData.messageBody)
-        const that = this;
-        const data = that.cs.sendMessageData(messageData);
-        if (data) {
-            alert('server reached successfully');
-        } else {
-            alert('server is unreachable');
-        }
+    sendMessage(formData) {
+        this.messageService
+            .sendMessage(formData)
+            .subscribe(response => [
+                console.log(response)
+            ]);
     }
 }
 

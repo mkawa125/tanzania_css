@@ -9,6 +9,7 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SlickModule} from 'ngx-slick';
+import { HttpModule} from '@angular/http';
 
 // importing components
 import { HomeComponentComponent } from './home-component/home-component.component';
@@ -22,7 +23,10 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
 
- // Defining routes
+// importing services
+import { MessageService} from './services/message.service';
+
+// Defining routes
 const AppRoutes: Routes = [
     { path: '' , component: HomeComponentComponent},
     { path: 'login' , component: LoginComponentComponent},
@@ -33,11 +37,11 @@ const AppRoutes: Routes = [
 
 @NgModule({
   declarations: [
-        AppComponent,
-        LoginComponentComponent,
-        HeaderComponentComponent,
-        FooterComponentComponent,
-        AppComponent,
+      AppComponent,
+      LoginComponentComponent,
+      HeaderComponentComponent,
+      FooterComponentComponent,
+      AppComponent,
       LoginComponentComponent,
       HomeComponentComponent,
       PasswordResetComponent,
@@ -57,13 +61,15 @@ const AppRoutes: Routes = [
       FormsModule,
       ReactiveFormsModule,
       SlickModule,
+      HttpModule,
       ToastrModule.forRoot({
           timeOut: 2000,
           preventDuplicates: true,
       }),
       CarouselModule.forRoot(),
   ],
-  bootstrap: [AppComponent]
+    providers: [MessageService],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
     slides = [
