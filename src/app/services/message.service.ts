@@ -18,7 +18,6 @@ export class MessageService {
   }
   sendMessage(postData) {
     const data = JSON.stringify(postData);
-    alert(postData);
     return this.http.post(this.server + 'sendMessage', data, this.options).map(
       res => res.json()
     );
