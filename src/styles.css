@@ -5,7 +5,7 @@
     opacity: 1;
 }
 .toast {
-    font-size: initial !important;
+    font-size: small !important;
     border: initial !important;
     backdrop-filter: blur(0) !important;
 }
