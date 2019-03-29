@@ -45,6 +45,7 @@ export class LoginComponentComponent implements OnInit {
           this.toast.error('Invalid Login', 'Failed', {
               timeOut: 2000,
               positionClass: 'toast-top-right',
+              progressBar: true,
           });
           return false;
       }
