@@ -58,7 +58,7 @@ export class ContactsComponent implements OnInit {
                 this.toast.success('Message Sent Successfully', 'Message Sent', {
                     timeOut: 2000,
                     positionClass: 'toast-top-right',
-                    messageClass: 'text-success'
+                    progressBar: true,
                 });
             });
         this.formData.reset();
