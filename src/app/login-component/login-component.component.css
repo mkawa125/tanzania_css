@@ -44,3 +44,19 @@
 .body{
     background-color: whitesmoke;
 }
+.footer-body{
+    padding: 10px;
+    font-size: small;
+}
+.footer-address{
+    font-size: small;
+}
+.footer{
+    font-size: small;
+    color: #99A3A4;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    margin: 0 auto;
+}
