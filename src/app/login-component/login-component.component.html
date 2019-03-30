@@ -1,6 +1,9 @@
 
-<div class="login-container" id="login-container">
-  <div class="col-sm-4 login-panel">
+<div class="col-sm-4 login-container" id="login-container">
+    <div class="brand">
+        Tanzania commission for secondary schools
+    </div>
+  <div class=" login-panel">
     <div class="login-head"><h4>Please Login</h4></div>
       <div class="login-body">
           <form [formGroup]="formData" (ngSubmit) = "onClickSubmit(formData.value)">
@@ -29,6 +32,15 @@
           </form>
       </div>
   </div>
+</div>
+<div class="footer col-md-9">
+    <div class="footer-body">
+        © Copyright 2018 Tanzania commission for secondary schools
+    </div>
+    <div class="footer-address">
+        P.O.BOX 2152 Dar es salaam,
+        <i class="fa fa-phone"></i> 22114557412
+    </div>
 </div>
 <router-outlet></router-outlet>
 
