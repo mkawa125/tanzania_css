@@ -5,6 +5,8 @@ import { ToastrService} from 'ngx-toastr';
 import { Contacts} from '../models/contacts';
 import { MessegeModel} from '../models/messegeModel';
 import { MessageService} from '../services/message.service';
+import { NgxSpinnerService } from 'ngx-spinner';
+import {catchError} from 'rxjs/operators';
 
 
 @Component({
@@ -23,6 +25,7 @@ export class ContactsComponent implements OnInit {
         private router: Router,
         private messageService: MessageService,
         private toast: ToastrService,
+        private spinner: NgxSpinnerService,
         private  fb: FormBuilder,
     ) {
     }
@@ -51,6 +54,7 @@ export class ContactsComponent implements OnInit {
         });
     }
     sendMessage(formData) {
+        this.spinner.show();
         this.messageService
             .sendMessage(formData)
             .subscribe(response => {
