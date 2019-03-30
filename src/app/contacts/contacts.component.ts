@@ -53,9 +53,15 @@ export class ContactsComponent implements OnInit {
     sendMessage(formData) {
         this.messageService
             .sendMessage(formData)
-            .subscribe(response => [
-                console.log(response)
-            ]);
+            .subscribe(response => {
+                console.log(response);
+                this.toast.success('Message Sent Successfully', 'Message Sent', {
+                    timeOut: 2000,
+                    positionClass: 'toast-top-right',
+                    progressBar: true,
+                });
+            });
+        this.formData.reset();
     }
 }
 

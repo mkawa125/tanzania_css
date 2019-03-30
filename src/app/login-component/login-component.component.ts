@@ -36,7 +36,6 @@ export class LoginComponentComponent implements OnInit {
           this.toast.success('Login Successfully', 'Success', {
               timeOut: 2000,
               positionClass: 'toast-top-right',
-              messageClass: 'text-success'
           });
           this.router.navigate(['']);
           this.router.navigate(['home']);
@@ -46,6 +45,7 @@ export class LoginComponentComponent implements OnInit {
           this.toast.error('Invalid Login', 'Failed', {
               timeOut: 2000,
               positionClass: 'toast-top-right',
+              progressBar: true,
           });
           return false;
       }

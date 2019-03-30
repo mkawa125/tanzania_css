@@ -2,20 +2,29 @@
 @import "~font-awesome/css/font-awesome.min.css";
 
 .login-container{
-    padding: 15px;
+    padding: 10px;
+    margin:  45px auto;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    border: 1px solid #EAE9E9;
+    box-shadow: 1px 2px 2px 0 #ABB2B9;
+    border-top: 6px solid #45AFAC;
 }
 .login-panel{
-    margin:  45px auto;
+
     background-color: white;
-    border: 1px solid #ABB2B9;
+    border: 1px solid whitesmoke;
     padding: 0;
-    box-shadow: 1px 3px 3px 0 #ABB2B9;
+    /*box-shadow: 1px 2px 2px 0 #ABB2B9;*/
 }
 .login-head{
     background-color: #A9CCE3;
     border-bottom: 1px solid #ABB2B9;
-    padding: 8px;
+    padding: 10px;
     font-size: small;
+    text-align: center;
+    text-transform: capitalize;
+
 }
 .login-head h4 {
     color: #2C3E50;
@@ -38,4 +47,24 @@
 }
 .body{
     background-color: whitesmoke;
+}
+.footer-body{
+    padding: 10px;
+    font-size: small;
+}
+.footer-address{
+    font-size: small;
+}
+.footer{
+    font-size: small;
+    color: #99A3A4;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    margin: 0 auto;
+}
+.brand{
+    margin: 15px;
+    font-family: Roboto;
 }
