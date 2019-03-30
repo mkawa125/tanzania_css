@@ -10,6 +10,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SlickModule} from 'ngx-slick';
 import { HttpModule} from '@angular/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 // importing components
 import { HomeComponentComponent } from './home-component/home-component.component';
@@ -66,6 +67,7 @@ const AppRoutes: Routes = [
           timeOut: 2000,
           preventDuplicates: true,
       }),
+      NgxSpinnerModule,
       CarouselModule.forRoot(),
   ],
     providers: [MessageService],
