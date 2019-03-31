@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,9 @@ export class MessageService {
     const data = JSON.stringify(postData);
     return this.http.post(this.server + 'sendMessage', data, this.options).map(
       res => res.json()
+          .catch((err) => {
+            return Observable.throw(err());
+          })
     );
   }
 }
