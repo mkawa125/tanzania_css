@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   constructor() { }
   tanzania_flag = '../assets/images/flag-tz.tmp';
-
+  no_image = 'No image';
   ngOnInit() {
   }
 
