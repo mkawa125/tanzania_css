@@ -65,6 +65,15 @@
     margin: 0 auto;
 }
 .brand{
-    margin: 15px;
+    margin: 15px 0 15px 0;
     font-family: Roboto;
+    text-align: center;
+}
+.flag-icon{
+    width: 30px;
+    float: left;
+}
+.logo{
+    float: right;
+    width: 25px;
 }
