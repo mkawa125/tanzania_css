@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 
@@ -16,7 +17,11 @@ export class LoginComponentComponent implements OnInit {
   constructor(
       private router: Router,
       private toast: ToastrService,
+      private spinner: NgxSpinnerService,
       ) { }
+    tanzania_flag = '../assets/images/flag-tz.tmp';
+    logo = '../assets/images/logo.png';
+    logo2 = '../assets/images/logo-og.png';
   ngOnInit() {
       this.formData = new FormGroup({
           indexNumber: new FormControl('', Validators.compose([
@@ -31,8 +36,14 @@ export class LoginComponentComponent implements OnInit {
 
 }
   onClickSubmit(inputData) {
-      console.log(inputData.indexNumber);
+      this.spinner.show();
+      setTimeout(() => {
+          /** spinner ends after 3 seconds */
+          this.spinner.hide();
+      }, 1000);
+      console.log(inputData);
       if (inputData.indexNumber === 'admin' && inputData.password === '123456') {
+          this.spinner.hide();
           this.toast.success('Login Successfully', 'Success', {
               timeOut: 2000,
               positionClass: 'toast-top-right',
