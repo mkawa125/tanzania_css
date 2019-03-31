@@ -21,7 +21,7 @@ export class LoginComponentComponent implements OnInit {
       ) { }
     tanzania_flag = '../assets/images/flag-tz.tmp';
     logo = '../assets/images/logo.png';
-    logo2 = '../assets/images/logo2.png';
+    logo2 = '../assets/images/logo-og.png';
   ngOnInit() {
       this.formData = new FormGroup({
           indexNumber: new FormControl('', Validators.compose([
