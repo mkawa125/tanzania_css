@@ -18,4 +18,13 @@ export class LoginService {
     this.headers.append('X-requested-width', 'XMLHttpRequest');
     this.options = new RequestOptions({headers: this.headers});
   }
+  login(postData) {
+    const data = JSON.stringify(postData);
+    return this.http.post(this.server + 'login', data, this.options).map(
+        res => res.json()
+            .catch((err) => {
+              return Observable.throw(err());
+            })
+    );
+  }
 }
