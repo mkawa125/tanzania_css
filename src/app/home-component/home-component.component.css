@@ -54,9 +54,7 @@ app-home-component{
     min-height: 205px;
     border: 1px solid #CCD1D1;
     font-size: small;
-    box-shadow: 0 2px 2px 0 #99A3A4;
-
-
+    box-shadow: 0 1px 1px 0 #CCD1D1;
 }
 .general-news .row{
     padding: 5px;
@@ -86,4 +84,8 @@ app-home-component{
 }
 .instructions ol li{
     margin-bottom: 10px;
+}
+
+@media (min-width: 520px) {
+
 }

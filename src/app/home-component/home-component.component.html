@@ -2,8 +2,8 @@
    <div class="col-sm-9" style="margin: 0 auto; background-color: whitesmoke">
       <div class="row" style="padding: 25px">
           <div class="col-sm-12">
-              <div class="row" style="background-color: white; padding: 15px">
-                  <div class="col-sm-8 carousel-panel" style="padding: 0 15px 5px 15px">
+              <div class="row" style="background-color: whitesmoke; padding: 1px">
+                  <div class="col-sm-8 carousel-panel" style="padding: 0">
                       <carousel >
                           <slide *ngFor="let slide of slides">
                               <img src="{{ slide.img}}" alt="image slide" class="slide-image" style="display: block; width: 100%; height: 250px">
@@ -11,7 +11,7 @@
                       </carousel>
                   </div>
 
-                  <div class="col-sm-4">
+                  <div class="col-sm-4" style=" padding-right: 0">
                       <div class="general-head">
                           <h4>General News</h4>
                       </div>
