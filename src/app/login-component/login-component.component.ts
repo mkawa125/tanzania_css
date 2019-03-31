@@ -41,7 +41,7 @@ export class LoginComponentComponent implements OnInit {
           /** spinner ends after 3 seconds */
           this.spinner.hide();
       }, 1000);
-      console.log(inputData.indexNumber);
+      console.log(inputData);
       if (inputData.indexNumber === 'admin' && inputData.password === '123456') {
           this.spinner.hide();
           this.toast.success('Login Successfully', 'Success', {
