@@ -81,6 +81,7 @@ export class LoginComponentComponent implements OnInit {
                               positionClass: 'toast-top-right',
                               progressBar: true,
                           });
+                      this.router.navigate(['/login']);
                   },
                   () => {
                       this.spinner.hide();
@@ -88,7 +89,7 @@ export class LoginComponentComponent implements OnInit {
                           timeOut: 2000,
                           positionClass: 'toast-top-right',
                       });
-                      this.router.navigate(['/login']);
+                      this.router.navigate(['/']);
                   }
               );
       }
