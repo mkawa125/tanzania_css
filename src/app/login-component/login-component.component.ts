@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
-import { FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
 import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -14,7 +14,7 @@ import { LoginService} from '../services/login.service';
 })
 export class LoginComponentComponent implements OnInit {
   formData;
-  indexNumber;
+  email;
   constructor(
       private router: Router,
       private toast: ToastrService,
@@ -26,9 +26,9 @@ export class LoginComponentComponent implements OnInit {
     logo2 = '../assets/images/logo-og.png';
   ngOnInit() {
       this.formData = new FormGroup({
-          indexNumber: new FormControl('', Validators.compose([
+          email: new FormControl('', Validators.compose([
               Validators.required,
-              Validators.maxLength(15),
+              Validators.maxLength(30),
           ])),
           password: new FormControl('', Validators.compose([
               Validators.required,
@@ -64,29 +64,32 @@ export class LoginComponentComponent implements OnInit {
   //     }
   // }
 
-    userLogin(inputData) {
-      try {
+    userLogin(inputData: NgForm) {
           this.spinner.show();
           console.log(inputData);
           this.login
               .login(inputData)
-              .subscribe(response => {
-                  console.log(response);
-                  this.spinner.hide();
-                  this.toast.success('Login successfully', 'Success', {
-                      timeOut: 1500,
-                      positionClass: 'toast-top-right',
-                      progressBar: true,
-                  });
-                  this.formData.reset();
-              });
-      } catch {
-          this.spinner.hide();
-          this.toast.error('Login Failure', 'Failure', {
-              timeOut: 2000,
-              positionClass: 'toast-top-right',
-              progressBar: true,
-          });
+              .subscribe(
+                  response => console.log(response),
+                  error => {
+                      console.log(error);
+                      this.spinner.hide();
+                      this.toast.error(
+                          'Invalid Login',
+                          'Failed',
+                          {timeOut: 2000,
+                              positionClass: 'toast-top-right',
+                              progressBar: true,
+                          });
+                  },
+                  () => {
+                      this.spinner.hide();
+                      this.toast.success('Login Successfully', 'Success', {
+                          timeOut: 2000,
+                          positionClass: 'toast-top-right',
+                      });
+                      this.router.navigate(['/login']);
+                  }
+              );
       }
-    }
 }
