@@ -12,11 +12,9 @@ nav {
     color: white;
     text-transform: capitalize;
 }
-.navbar-collapse ul.navbar-nav li.nav-item a.nav-link{
-    color: white;
-}
 .navbar-collapse ul.navbar-nav{
     margin-left: 50%;
+    margin-top: 2px;
 }
 .navbar-collapse li.dropdown button{
     padding: 5px;
@@ -24,4 +22,12 @@ nav {
 }
 .flag-icon{
     width: 25px;
+}
+.navbar-collapse ul{
+    text-align: center;
+    margin-top: 10px;
+}
+.navbar-collapse ul.navbar-nav li.nav-item a.nav-link{
+    padding: 5px;
+    color: white;
 }
