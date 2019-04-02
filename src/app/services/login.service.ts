@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
-import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -32,5 +31,21 @@ export class LoginService {
           this.isLoggedIn = true;
         }
     );
+  }
+  logout() {
+    return this.http.get(
+        this.server + 'logout',
+        { headers: new Headers({ 'Authorization': 'Bearer ' + localStorage.getItem('token') }) }
+        )
+        .map(
+            response => {
+              return response.json().message;
+            })
+        .do(
+            () => {
+              localStorage.removeItem('token');
+              this.isLoggedIn = false;
+            }
+            );
   }
 }
