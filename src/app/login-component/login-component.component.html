@@ -7,12 +7,12 @@
         <div class=" login-panel">
             <div class="login-head"><h4><strong>Please Login</strong></h4></div>
             <div class="login-body">
-                <form [formGroup]="formData" (ngSubmit) = "onClickSubmit(formData.value)">
+                <form [formGroup]="formData" (ngSubmit) = "userLogin(formData.value)">
                     <div class="form-group">
-                        <label for="indexNumber"><strong>Index Number:</strong></label>
+                        <label for="email"><strong>Username or email:</strong></label>
                         <div class="input-group">
-                            <input id="indexNumber" type="text" name="indexNUmber"
-                                   formControlName="indexNumber" class="form-control" placeholder="s1968.0048.2012">
+                            <input id="email" type="text" name="email"
+                                   formControlName="email" class="form-control" placeholder="username or email">
                         </div>
                     </div>
                     <div class="form-group">

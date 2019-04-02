@@ -26,6 +26,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 
 // importing services
 import { MessageService} from './services/message.service';
+import { LoginService} from './services/login.service';
 
 // Defining routes
 const AppRoutes: Routes = [
@@ -35,6 +36,7 @@ const AppRoutes: Routes = [
     { path: 'about' , component: AboutComponent},
     { path: 'contacts', component: ContactsComponent}
 ];
+const server_address = 'http://127.0.0.1:8000/api/v1/';
 
 @NgModule({
   declarations: [
@@ -70,11 +72,15 @@ const AppRoutes: Routes = [
       NgxSpinnerModule,
       CarouselModule.forRoot(),
   ],
-    providers: [MessageService],
+    providers: [
+        MessageService,
+        LoginService,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
     slides = [
         {img: 'assets/images/africans.jpg'},
     ];
+    server_address = 'http://127.0.0.1:8000/api/v1/';
 }
