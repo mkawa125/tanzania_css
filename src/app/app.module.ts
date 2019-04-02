@@ -27,14 +27,15 @@ import { ContactsComponent } from './contacts/contacts.component';
 // importing services
 import { MessageService} from './services/message.service';
 import { LoginService} from './services/login.service';
-
+import { AdminComponent } from './dashboard/admin/admin.component';
+import { AuthGuard} from './guards/auth.guard';
 // Defining routes
 const AppRoutes: Routes = [
-    { path: '' , component: HomeComponentComponent},
+    { path: '' , component: HomeComponentComponent , canActivate: [AuthGuard]},
     { path: 'login' , component: LoginComponentComponent},
     { path: 'reset-password', component: PasswordResetComponent},
-    { path: 'about' , component: AboutComponent},
-    { path: 'contacts', component: ContactsComponent}
+    { path: 'about' , component: AboutComponent, canActivate: [AuthGuard]},
+    { path: 'contacts', component: ContactsComponent, canActivate: [AuthGuard]},
 ];
 const server_address = 'http://127.0.0.1:8000/api/v1/';
 
@@ -54,6 +55,7 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
       HeaderComponent,
       AboutComponent,
       ContactsComponent,
+      AdminComponent,
 
   ],
   imports: [
@@ -75,6 +77,7 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
     providers: [
         MessageService,
         LoginService,
+        AuthGuard,
     ],
     bootstrap: [AppComponent]
 })

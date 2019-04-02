@@ -32,6 +32,13 @@ export class LoginService {
         }
     );
   }
+    checkAuth() {
+        if (localStorage.getItem('token')) {
+            this.isLoggedIn = true;
+            return true;
+        }
+        return false;
+    }
   logout() {
     return this.http.get(
         this.server + 'logout',
