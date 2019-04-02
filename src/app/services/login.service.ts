@@ -23,12 +23,13 @@ export class LoginService {
     return this.http.post(this.server + 'login', data, this.options)
         .map(
             response => {
-           return response.json();
+           return response.json().token;
         })
         .do (
-        (access_token) => {
-          localStorage.setItem('token', access_token);
+        token => {
+          localStorage.setItem('token', token);
           this.isLoggedIn = true;
+          alert(token);
         }
     );
   }
@@ -40,19 +41,19 @@ export class LoginService {
         return false;
     }
   logout() {
-    return this.http.get(
-        this.server + 'logout',
-        { headers: new Headers({ 'Authorization': 'Bearer ' + localStorage.getItem('token') }) }
-        )
-        .map(
-            response => {
-              return response.json().message;
-            })
-        .do(
-            () => {
-              localStorage.removeItem('token');
-              this.isLoggedIn = false;
-            }
-            );
+      return this.http.get(
+          this.server + 'logout',
+          { headers: new Headers({ 'Authorization': 'Bearer :' + localStorage.getItem('token') }) }
+      )
+          .map(
+              response => {
+                  return response.json().message;
+              })
+          .do(
+              () => {
+                  localStorage.removeItem('token');
+                  this.isLoggedIn = false;
+              }
+              );
   }
 }

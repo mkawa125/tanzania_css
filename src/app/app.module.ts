@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { SlickModule} from 'ngx-slick';
 import { HttpModule} from '@angular/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { APP_ROUTES} from './app.routes';
 
 // importing components
 import { HomeComponentComponent } from './home-component/home-component.component';
@@ -29,14 +30,7 @@ import { MessageService} from './services/message.service';
 import { LoginService} from './services/login.service';
 import { AdminComponent } from './dashboard/admin/admin.component';
 import { AuthGuard} from './guards/auth.guard';
-// Defining routes
-const AppRoutes: Routes = [
-    { path: '' , component: HomeComponentComponent , canActivate: [AuthGuard]},
-    { path: 'login' , component: LoginComponentComponent},
-    { path: 'reset-password', component: PasswordResetComponent},
-    { path: 'about' , component: AboutComponent, canActivate: [AuthGuard]},
-    { path: 'contacts', component: ContactsComponent, canActivate: [AuthGuard]},
-];
+
 const server_address = 'http://127.0.0.1:8000/api/v1/';
 
 @NgModule({
@@ -60,8 +54,8 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
   ],
   imports: [
       BrowserModule,
-      RouterModule.forRoot(AppRoutes),
-      RouterModule.forChild(AppRoutes),
+      RouterModule.forRoot(APP_ROUTES),
+      RouterModule.forChild(APP_ROUTES),
       BrowserAnimationsModule,
       FormsModule,
       ReactiveFormsModule,
