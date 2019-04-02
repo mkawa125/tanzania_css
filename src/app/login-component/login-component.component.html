@@ -1,54 +1,57 @@
 
-<div class="col-sm-4 login-container" id="login-container">
-    <div class="brand">
-        <img src="{{ logo2 }}" class="flag-icon" alt="No image"> <strong style="text-align: center">Tanzania commission for secondary schools</strong> <img src="{{ tanzania_flag }}" class="logo" alt="No image">
+<div class="#" style="padding: 20px">
+    <div class="col-sm-4 login-container" id="login-container">
+        <div class="brand">
+            <img src="{{ logo2 }}" class="flag-icon" alt="No image"> <strong style="text-align: center">Tanzania commission for secondary schools</strong> <img src="{{ tanzania_flag }}" class="logo" alt="No image">
+        </div>
+        <div class=" login-panel">
+            <div class="login-head"><h4><strong>Please Login</strong></h4></div>
+            <div class="login-body">
+                <form [formGroup]="formData" (ngSubmit) = "userLogin(formData.value)">
+                    <div class="form-group">
+                        <label for="email"><strong>Username or email:</strong></label>
+                        <div class="input-group">
+                            <input id="email" type="text" name="email"
+                                   formControlName="email" class="form-control" placeholder="username or email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><strong>Password:</strong></label>
+                        <div class="input-group">
+                            <input id="password" type="password" name="password"
+                                   formControlName="password" class="form-control" placeholder="Enter password">
+                        </div>
+                    </div>
+                    <div class="forgot-password">
+                        <a routerLink="reset-password" >forgot password?</a>
+                    </div>
+                    <button  value="login" type="submit" class="btn btn-dark btn-block"
+                             [disabled]="!formData.valid"
+                             style="padding: 5px; float: right; font-size: 15px">
+                        Login <i class="fa fa-sign-in"></i>
+                        <ngx-spinner
+                                bdColor="rgba(51,51,51,0.8)"
+                                size="small"
+                                color="#fff"
+                                fullScreen = "false"
+                                type="ball-pulse">
+                            <span>loading...</span>
+                        </ngx-spinner>
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
-  <div class=" login-panel">
-      <div class="login-head"><h4><strong>Please Login</strong></h4></div>
-      <div class="login-body">
-          <form [formGroup]="formData" (ngSubmit) = "onClickSubmit(formData.value)">
-              <div class="form-group">
-                  <label for="indexNumber"><strong>Index Number:</strong></label>
-                  <div class="input-group">
-                      <input id="indexNumber" type="text" name="indexNUmber"
-                             formControlName="indexNumber" class="form-control" placeholder="s1968.0048.2012">
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label for="password"><strong>Password:</strong></label>
-                  <div class="input-group">
-                      <input id="password" type="password" name="password"
-                             formControlName="password" class="form-control" placeholder="Enter password">
-                  </div>
-              </div>
-              <div class="forgot-password">
-                  <a routerLink="reset-password" >forgot password?</a>
-              </div>
-              <button  value="login" type="submit" class="btn btn-dark btn-block"
-                       [disabled]="!formData.valid"
-                       style="padding: 5px; float: right; font-size: 15px">
-                  Login <i class="fa fa-sign-in"></i>
-                  <ngx-spinner
-                          bdColor="rgba(51,51,51,0.8)"
-                          size="small"
-                          color="#fff"
-                          fullScreen = "false"
-                          type="ball-pulse">
-                      <span>loading...</span>
-                  </ngx-spinner>
-              </button>
-          </form>
-      </div>
-  </div>
+    <div class="footer col-md-9">
+        <div class="footer-body">
+            © Copyright 2018 Tanzania commission for secondary schools
+        </div>
+        <div class="footer-address">
+            P.O.BOX 2152 Dar es salaam,
+            <i class="fa fa-phone"></i> 22114557412
+        </div>
+    </div>
 </div>
-<div class="footer col-md-9">
-    <div class="footer-body">
-        © Copyright 2018 Tanzania commission for secondary schools
-    </div>
-    <div class="footer-address">
-        P.O.BOX 2152 Dar es salaam,
-        <i class="fa fa-phone"></i> 22114557412
-    </div>
-</div>
+
 <router-outlet></router-outlet>
 
