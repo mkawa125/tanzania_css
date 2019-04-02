@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService} from '../services/login.service';
+import { NgxSpinnerService} from 'ngx-spinner';
+import { ToastrService} from 'ngx-toastr';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +12,9 @@ import { LoginService} from '../services/login.service';
 export class HeaderComponent implements OnInit {
   constructor(
       private loginService: LoginService,
+      private spinner: NgxSpinnerService,
+      private toast: ToastrService,
+      private router: Router,
   ) { }
   tanzania_flag = '../assets/images/flag-tz.tmp';
   no_image = 'No image';
@@ -18,7 +24,9 @@ export class HeaderComponent implements OnInit {
     this.loginService.logout().subscribe(
         response => console.log(response),
         error => console.log(error),
-        () =>  console.log('logged out')
+        () => {
+          this.router.navigate(['/login']);
+        }
     );
   }
 

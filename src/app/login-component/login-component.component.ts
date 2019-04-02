@@ -37,33 +37,6 @@ export class LoginComponentComponent implements OnInit {
       });
 
 }
-  // onClickSubmit(inputData) {
-  //     this.spinner.show();
-  //     setTimeout(() => {
-  //         /** spinner ends after 3 seconds */
-  //         this.spinner.hide();
-  //     }, 1000);
-  //     console.log(inputData);
-  //     if (inputData.indexNumber === 'admin' && inputData.password === '123456') {
-  //         this.spinner.hide();
-  //         this.toast.success('Login Successfully', 'Success', {
-  //             timeOut: 2000,
-  //             positionClass: 'toast-top-right',
-  //         });
-  //         this.router.navigate(['']);
-  //         this.router.navigate(['home']);
-  //         document.getElementById('login-container').style.display = '';
-  //         document.getElementById('home-container').style.display = '';
-  //     } else {
-  //         this.toast.error('Invalid Login', 'Failed', {
-  //             timeOut: 2000,
-  //             positionClass: 'toast-top-right',
-  //             progressBar: true,
-  //         });
-  //         return false;
-  //     }
-  // }
-
     userLogin(inputData: NgForm) {
           this.spinner.show();
           console.log(inputData);

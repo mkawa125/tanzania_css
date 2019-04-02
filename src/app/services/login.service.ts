@@ -29,7 +29,6 @@ export class LoginService {
         token => {
           localStorage.setItem('token', token);
           this.isLoggedIn = true;
-          alert(token);
         }
     );
   }
