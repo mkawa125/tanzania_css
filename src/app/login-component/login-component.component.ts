@@ -40,30 +40,30 @@ export class LoginComponentComponent implements OnInit {
     userLogin(inputData: NgForm) {
           this.spinner.show();
           console.log(inputData);
-          this.login
-              .login(inputData)
-              .subscribe(
-                  response => console.log(response),
-                  error => {
-                      console.log(error);
-                      this.spinner.hide();
-                      this.toast.error(
-                          'Invalid Login',
-                          'Failed',
-                          {timeOut: 2000,
-                              positionClass: 'toast-top-right',
-                              progressBar: true,
-                          });
-                      this.router.navigate(['/login']);
+          this.login.login(inputData).subscribe(
+              response => {
+                  console.log(response);
                   },
-                  () => {
-                      this.spinner.hide();
-                      this.toast.success('Login Successfully', 'Success', {
-                          timeOut: 2000,
+              error => {
+                  console.log(error);
+                  this.spinner.hide();
+                  this.toast.error(
+                      'Invalid Login',
+                      'Failed',
+                      {timeOut: 2000,
                           positionClass: 'toast-top-right',
+                          progressBar: true,
                       });
-                      this.router.navigate(['/']);
-                  }
-              );
-      }
+                  this.router.navigate(['/login']);
+              },
+              () => {
+                  this.spinner.hide();
+                  this.toast.success('Login Successfully', 'Success', {
+                      timeOut: 2000,
+                      positionClass: 'toast-top-right',
+                  });
+                  this.router.navigate(['/']);
+              }
+          );
+  }
 }

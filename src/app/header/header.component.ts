@@ -15,9 +15,11 @@ export class HeaderComponent implements OnInit {
       private spinner: NgxSpinnerService,
       private toast: ToastrService,
       private router: Router,
-  ) { }
+  ) {}
   tanzania_flag = '../assets/images/flag-tz.tmp';
   no_image = 'No image';
+   user_role = this.loginService.getUserROle();
+   username = this.loginService.getUserName();
   ngOnInit() {
   }
   logout() {
