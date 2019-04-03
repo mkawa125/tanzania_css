@@ -30,6 +30,8 @@ import { MessageService} from './services/message.service';
 import { LoginService} from './services/login.service';
 import { AdminComponent } from './dashboard/admin/admin.component';
 import { AuthGuard} from './guards/auth.guard';
+import { CreateStaffComponent } from './create-staff/create-staff.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 const server_address = 'http://127.0.0.1:8000/api/v1/';
 
@@ -50,6 +52,8 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
       AboutComponent,
       ContactsComponent,
       AdminComponent,
+      CreateStaffComponent,
+      SideMenuComponent,
 
   ],
   imports: [
