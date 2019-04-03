@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   ) {}
   tanzania_flag = '../assets/images/flag-tz.tmp';
   no_image = 'No image';
+  profile = '../assets/images/mkawa.jpg';
    user_role = this.loginService.getUserROle();
    username = this.loginService.getUserName();
   ngOnInit() {

@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^6.1.10",
     "@angular/platform-browser-dynamic": "^6.1.10",
     "@angular/router": "^6.1.10",
+    "Slidebars": "^2.0.0",
     "ajax": "0.0.4",
     "angular-carousel": "^1.1.0",
     "angular-flash-message": "^3.4.0",
