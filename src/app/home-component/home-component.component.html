@@ -1,77 +1,127 @@
 <app-main>
-   <div class="col-sm-9" style="margin: 0 auto; background-color: whitesmoke">
-      <div class="row" style="padding: 25px">
-          <div class="col-sm-12">
-              <div class="row" style="background-color: whitesmoke; padding: 1px">
-                  <div class="col-sm-8 carousel-panel" style="padding: 0">
-                      <carousel >
-                          <slide *ngFor="let slide of slides">
-                              <img src="{{ slide.img}}" alt="image slide" class="slide-image" style="display: block; width: 100%; height: 250px">
-                          </slide>
-                      </carousel>
-                  </div>
+    <div class="col-sm-11" style="margin: 0 auto; background-color: whitesmoke; padding: 0; border: 1px solid lightsteelblue">
+        <div class="row" style="padding: 0 15px">
+            <div class="col-md-2  collapse in" id="sidebar" style="background-color: red; padding: 0">
+                <div class="list-group panel">
+                    <a href="#menu1" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="hidden-sm-down">Item 1</span> </a>
+                    <div class="collapse" id="menu1">
+                        <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem 1 </a>
+                        <div class="collapse" id="menu1sub1">
+                            <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 1 a</a>
+                            <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 2 b</a>
+                            <a href="#menu1sub1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem 3 c </a>
+                            <div class="collapse" id="menu1sub1sub1">
+                                <a href="#" class="list-group-item" data-parent="#menu1sub1sub1">Subitem 3 c.1</a>
+                                <a href="#" class="list-group-item" data-parent="#menu1sub1sub1">Subitem 3 c.2</a>
+                            </div>
+                            <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 4 d</a>
+                            <a href="#menu1sub1sub2" class="list-group-item" data-toggle="collapse"  aria-expanded="false">Subitem 5 e </a>
+                            <div class="collapse" id="menu1sub1sub2">
+                                <a href="#" class="list-group-item" data-parent="#menu1sub1sub2">Subitem 5 e.1</a>
+                                <a href="#" class="list-group-item" data-parent="#menu1sub1sub2">Subitem 5 e.2</a>
+                            </div>
+                        </div>
+                        <a href="#" class="list-group-item" data-parent="#menu1">Subitem 2</a>
+                        <a href="#" class="list-group-item" data-parent="#menu1">Subitem 3</a>
+                    </div>
+                    <a href="#" class="list-group-item collapsed" data-parent="#sidebar"><i class="fa fa-film"></i> <span class="hidden-sm-down">Item 2</span></a>
+                    <a href="#menu3" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-book"></i> <span class="hidden-sm-down">Item 3 </span></a>
+                    <div class="collapse" id="menu3">
+                        <a href="#" class="list-group-item" data-parent="#menu3">3.1</a>
+                        <a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">3.2 </a>
+                        <div class="collapse" id="menu3sub2">
+                            <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 a</a>
+                            <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 b</a>
+                            <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 c</a>
+                        </div>
+                        <a href="#" class="list-group-item" data-parent="#menu3">3.3</a>
+                    </div>
+                    <a href="#" class="list-group-item collapsed" data-parent="#sidebar"><i class="fa fa-heart"></i> <span class="hidden-sm-down">Item 4</span></a>
+                    <a href="#" class="list-group-item collapsed" data-parent="#sidebar"><i class="fa fa-list"></i> <span class="hidden-sm-down">Item 5</span></a>
+                    <a href="#" class="list-group-item collapsed" data-parent="#sidebar"><i class="fa fa-clock-o"></i> <span class="hidden-sm-down">Link</span></a>
+                    <a href="#" class="list-group-item collapsed" data-parent="#sidebar"><i class="fa fa-th"></i> <span class="hidden-sm-down">Link</span></a>
+                    <a href="#" class="list-group-item collapsed" data-parent="#sidebar"><i class="fa fa-gear"></i> <span class="hidden-sm-down">Link</span></a>
+                    <a href="#" class="list-group-item collapsed" data-parent="#sidebar"><i class="fa fa-calendar"></i> <span class="hidden-sm-down">Link</span></a>
+                    <a href="#" class="list-group-item collapsed" data-parent="#sidebar"><i class="fa fa-envelope"></i> <span class="hidden-sm-down">Link</span></a>
+                    <a href="#" class="list-group-item collapsed" data-parent="#sidebar"><i class="fa fa-bar-chart-o"></i> <span class="hidden-sm-down">Link</span></a>
+                    <a href="#" class="list-group-item collapsed" data-parent="#sidebar"><i class="fa fa-star"></i> <span class="hidden-sm-down">Link</span></a>
+                </div>
+            </div>
+            <main class="col-md-10 col-xs-11 p-l-2 p-t-2" style="margin: 0 auto; background-color: white; padding: 20px">
+                <div class="row" style="padding: 25px">
+                    <div class="col-sm-12">
+                        <div class="row" style="background-color: whitesmoke; padding: 1px">
+                            <div class="col-sm-8 carousel-panel" style="padding: 0">
+                                <carousel >
+                                    <slide *ngFor="let slide of slides">
+                                        <img src="{{ slide.img}}" alt="image slide" class="slide-image" style="display: block; width: 100%; height: 250px">
+                                    </slide>
+                                </carousel>
+                            </div>
 
-                  <div class="col-sm-4" style=" padding-right: 0">
-                      <div class="general-head">
-                          <h4>General News</h4>
-                      </div>
-                      <div class="general-news">
-                          <div class="row">
-                              <div class="col-sm-2 date">
-                                  <img src="{{ red_fire}}" class="new-icon">
+                            <div class="col-sm-4" style=" padding-right: 0">
+                                <div class="general-head">
+                                    <h4>General News</h4>
+                                </div>
+                                <div class="general-news">
+                                    <div class="row">
+                                        <div class="col-sm-2 date">
+                                            <img src="{{ red_fire}}" class="new-icon">
 
-                              </div>
-                              <div class="col-sm-10">
-                                  <a routerLink="">
-                                      General information about form four application
-                                  </a>
-                                  <small style="color: #CCD1D1">20, oct</small>
-                              </div>
-                          </div>
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <a routerLink="">
+                                                General information about form four application
+                                            </a>
+                                            <small style="color: #CCD1D1">20, oct</small>
+                                        </div>
+                                    </div>
 
-                          <div class="row">
-                              <div class="col-sm-2 date">
-                                  <img src="{{ red_fire}}" class="new-icon">
+                                    <div class="row">
+                                        <div class="col-sm-2 date">
+                                            <img src="{{ red_fire}}" class="new-icon">
 
-                              </div>
-                              <div class="col-sm-10">
-                                  <a routerLink="">
-                                      General information about form four application
-                                  </a>
-                                  <small style="color: #CCD1D1">20, oct</small>
-                              </div>
-                          </div>
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <a routerLink="">
+                                                General information about form four application
+                                            </a>
+                                            <small style="color: #CCD1D1">20, oct</small>
+                                        </div>
+                                    </div>
 
-                      </div>
-                  </div>
-              </div>
-              </div>
-          </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
-       <div class="row" style="padding: 15px">
-           <div class="col-sm-12 ">
-               <div class="instructions">
-                   <strong>Steps to apply</strong>
-                   <ol>
-                       <li>
-                           Login to the system to apply for admission. to login into the system please click a login button
-                           on top of navigation bar or <a routerLink="login">Click here</a> to login. The login credentials should be as follows;
-                           <strong><span style="color: chocolate">username</span> : form4 index number</strong> and <strong><span style="color: chocolate">password</span> : your last name</strong>
-                       </li>
-                       <li>
-                           After successfully logged in student should change the password for security purpose. if you won't change
-                           the password you can not be able to apply for admission.
-                       </li>
-                       <li>
-                           All students who needs to continue with government schools are required to apply for admission. If the student
-                           from private schools will not apply for admission  the government will admit him/her a second priority.
-                       </li>
+                <div class="row" style="padding: 15px">
+                    <div class="col-sm-12 ">
+                        <div class="instructions">
+                            <strong>Steps to apply</strong>
+                            <ol>
+                                <li>
+                                    Login to the system to apply for admission. to login into the system please click a login button
+                                    on top of navigation bar or <a routerLink="login">Click here</a> to login. The login credentials should be as follows;
+                                    <strong><span style="color: chocolate">username</span> : form4 index number</strong> and <strong><span style="color: chocolate">password</span> : your last name</strong>
+                                </li>
+                                <li>
+                                    After successfully logged in student should change the password for security purpose. if you won't change
+                                    the password you can not be able to apply for admission.
+                                </li>
+                                <li>
+                                    All students who needs to continue with government schools are required to apply for admission. If the student
+                                    from private schools will not apply for admission  the government will admit him/her a second priority.
+                                </li>
 
-                   </ol>
-               </div>
-           </div>
-       </div>
-   </div>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
 </app-main>
 <router-outlet></router-outlet>

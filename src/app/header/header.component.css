@@ -1,6 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
-@import "~Slidebars/dist/slidebars.min.css";
 
 nav {
     font-size: small;
@@ -20,6 +19,10 @@ nav {
 .navbar-collapse li.dropdown button{
     padding: 5px;
     font-size: small;
+}
+.navbar-brand{
+    text-align: center;
+    margin-left: 35px;
 }
 .flag-icon{
     width: 25px;
