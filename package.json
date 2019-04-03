@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^6.1.10",
     "@angular/platform-browser-dynamic": "^6.1.10",
     "@angular/router": "^6.1.10",
+    "Slidebars": "^2.0.0",
     "ajax": "0.0.4",
     "angular-carousel": "^1.1.0",
     "angular-flash-message": "^3.4.0",
@@ -34,7 +35,7 @@
     "ngx-slick": "^0.2.1",
     "ngx-spinner": "^7.0.0",
     "ngx-toastr": "^9.2.0",
-    "rxjs": "6.0.0",
+    "rxjs": "^6.0.0",
     "rxjs-compat": "6.0.0",
     "tslib": "^1.9.0",
     "zone.js": "^0.8.29"

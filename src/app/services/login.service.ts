@@ -23,29 +23,55 @@ export class LoginService {
     return this.http.post(this.server + 'login', data, this.options)
         .map(
             response => {
-           return response.json();
+                return response.json();
         })
         .do (
-        (access_token) => {
-          localStorage.setItem('token', access_token);
+        user => {
+          localStorage.setItem('token', user.token);
+          localStorage.setItem('role', user.user.role);
+          localStorage.setItem('name', user.user.name);
+          localStorage.setItem('surname', user.user.surname);
+          localStorage.setItem('firstName', user.user.firstName);
           this.isLoggedIn = true;
         }
     );
   }
+  getUserROle() {
+      if (this.isLoggedIn === true) {
+          const role = localStorage.getItem('role');
+          this.isLoggedIn = true;
+          return role;
+      }
+  }
+  getUserName() {
+      if (this.isLoggedIn === true) {
+          const name = localStorage.getItem('name');
+          this.isLoggedIn = true;
+          return name;
+      }
+      return false;
+  }
+    checkAuth() {
+        if (localStorage.getItem('token')) {
+            this.isLoggedIn = true;
+            return true;
+        }
+        return false;
+    }
   logout() {
-    return this.http.get(
-        this.server + 'logout',
-        { headers: new Headers({ 'Authorization': 'Bearer ' + localStorage.getItem('token') }) }
-        )
-        .map(
-            response => {
-              return response.json().message;
-            })
-        .do(
-            () => {
-              localStorage.removeItem('token');
-              this.isLoggedIn = false;
-            }
-            );
+      return this.http.get(
+          this.server + 'logout',
+          { headers: new Headers({ 'Authorization': 'Bearer :' + localStorage.getItem('token') }) }
+      )
+          .map(
+              response => {
+                  return response.json();
+              })
+          .do(
+              () => {
+                  localStorage.removeItem('token');
+                  this.isLoggedIn = false;
+              }
+              );
   }
 }

@@ -1,10 +1,12 @@
-<nav class="navbar navbar-expand-md sticky-top col-sm-9">
-  <a class="navbar-brand" href="#">
-    <img src="{{ tanzania_flag }}" class="flag-icon" [alt]="no_image"> Commission for secondary schools
-  </a>
+<nav class="navbar navbar-expand-md sticky-top col-sm-11">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <i class="fa fa-navicon"></i>
   </button>
+    <a href="#sidebar" data-toggle="collapse"><i class="fa fa-navicon fa-lg"></i></a>
+  <a class="navbar-brand" href="#">
+    <!--<img src="{{ tanzania_flag }}" class="flag-icon" [alt]="no_image"> -->
+      Tanzania Commission for secondary schools
+  </a>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -17,13 +19,25 @@
         <a class="nav-link" routerLink="/contacts"><i class="fa fa-phone"></i> Contacts</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login"><i class="fa fa-sign-in"></i> Login</a>
-      </li>
 
-      <!--<li class="nav-item">-->
-        <!--<a class="nav-link" routerLink="/login" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</a>-->
-      <!--</li>-->
+
     </ul>
+    <div class="#" style="position: absolute; right: 55px; color: white">
+
+      <img src="{{ profile }}" class="flag-icon rounded-circle" alt="No image">
+
+
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="color: white">
+          <span style="font-size: small">{{ user_role }}</span>
+          <span class="caret" style="font-size: small"></span></button>
+      <ul class="dropdown-menu">
+          <li><a class="nav-link" href="#"><i class="fa fa-cog"></i> Setting</a></li>
+          <li><a class="nav-link" href="#"><i class="fa fa-user-circle"></i>Profile</a></li>
+          <li><a class="nav-link" href="#"><i class="fa fa-users"></i>Students</a></li>
+          <li class="nav-item">
+              <a class="nav-link" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</a>
+          </li>
+      </ul>
+    </div>
   </div>
 </nav>
