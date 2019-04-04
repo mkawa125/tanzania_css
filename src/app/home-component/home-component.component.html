@@ -1,22 +1,25 @@
 <app-main xmlns="http://www.w3.org/1999/html">
     <div class="col-sm-11" style="margin: 0 auto; background-color: whitesmoke; padding: 0; border: 1px solid lightsteelblue">
-        <div class="row" style="padding: 0 15px">
+        <div class="row" style="padding: 0">
             <div class="col-md-2  collapse in" id="sidebar" style="padding: 0">
                 <app-side-menu xmlns="http://www.w3.org/1999/html"></app-side-menu>
             </div>
-            <main class="col-md-10 col-xs-11 p-l-2 p-t-2" style="margin: 0 auto; background-color: white; padding: 20px">
+            <main class="col-md-10 col-xs-11 p-l-2 p-t-2" style="margin: 0 auto; background-color: white; padding: 10px">
                 <div class="row" style="padding: 25px">
                     <div class="col-sm-12">
-                        <div class="row" style="background-color: whitesmoke;">
-                            <div class="col-sm-8 carousel-panel" style="padding: 0">
+                        <div class="row" style="background-color: white; padding: 1px">
+                            <div class="col-sm-8" style="padding: 0; margin-bottom: 15px">
+                                <div class="col-md-12">
                                 <carousel >
                                     <slide *ngFor="let slide of slides">
                                         <img src="{{ slide.img}}" alt="image slide" class="slide-image" style="display: block; width: 100%; height: 250px">
                                     </slide>
                                 </carousel>
+                                </div>
                             </div>
 
-                            <div class="col-sm-4" style=" padding-right: 0">
+                            <div class="col-sm-4">
+                                <div class="col-md-12 " style="padding: 0">
                                 <div class="general-head">
                                     <h4>General News</h4>
                                 </div>
@@ -46,7 +49,7 @@
                                             <small style="color: #CCD1D1">20, oct</small>
                                         </div>
                                     </div>
-
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -56,26 +59,30 @@
 
                 <div class="row" style="padding: 15px">
                     <div class="col-sm-12 ">
-                        <div class="instructions">
-                            <strong>Steps to apply</strong>
-                            <ol>
-                                <li>
-                                    Login to the system to apply for admission. to login into the system please click a login button
-                                    on top of navigation bar or <a routerLink="login">Click here</a> to login. The login credentials should be as follows;
-                                    <strong><span style="color: chocolate">username</span> : form4 index number</strong> and <strong><span style="color: chocolate">password</span> : your last name</strong>
-                                </li>
-                                <li>
-                                    After successfully logged in student should change the password for security purpose. if you won't change
-                                    the password you can not be able to apply for admission.
-                                </li>
-                                <li>
-                                    All students who needs to continue with government schools are required to apply for admission. If the student
-                                    from private schools will not apply for admission  the government will admit him/her a second priority.
-                                </li>
+                        <div class="col-md-12">
+                            <div class="instructions">
+                                <div class="col-md-12">
+                                    <strong>Steps to apply</strong>
+                                    <ol>
+                                        <li>
+                                            Login to the system to apply for admission. to login into the system please click a login button
+                                            on top of navigation bar or <a routerLink="login">Click here</a> to login. The login credentials should be as follows;
+                                            <strong><span style="color: chocolate">username</span> : form4 index number</strong> and <strong><span style="color: chocolate">password</span> : your last name</strong>
+                                        </li>
+                                        <li>
+                                            After successfully logged in student should change the password for security purpose. if you won't change
+                                            the password you can not be able to apply for admission.
+                                        </li>
+                                        <li>
+                                            All students who needs to continue with government schools are required to apply for admission. If the student
+                                            from private schools will not apply for admission  the government will admit him/her a second priority.
+                                        </li>
 
-                            </ol>
+                                    </ol>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        </div>
                 </div>
             </main>
         </div>

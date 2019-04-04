@@ -5,12 +5,20 @@ app-home-component{
 }
 .carousel-panel{
     padding: 0;
+    margin-bottom: 15px;
 }
 .home-links{
     padding: 10px;
     background-color: #CCD1D1;
     border-bottom: 2px solid #99A3A4;
 
+}
+.content{
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px #CCD1D1;
+    font-size: small;
+    padding: 0;
 }
 .home-links h4{
     font-size: small;
@@ -84,6 +92,7 @@ app-home-component{
 }
 .instructions ol li{
     margin-bottom: 10px;
+    text-align: justify;
 }
 .flag-icon{
     height: 30px;
