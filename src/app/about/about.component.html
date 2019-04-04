@@ -1,40 +1,48 @@
 <app-main>
-  <div class="col-sm-9" style="margin: 0 auto; background-color: whitesmoke">
-    <div class="row" style="padding: 15px 35px 15px 35px">
-      <div class="col-sm-12" style="background-color: white">
-        <div class="col-sm-11 about-body" >
-          <div class="about-head">
-            <h4>Tanzania commission for secondary schools</h4>
+  <div class="col-sm-11" style="margin: 0 auto; background-color: whitesmoke; padding: 0; border: 1px solid lightsteelblue">
+    <div class="row" style="padding: 0 15px">
+      <div class="col-md-2  collapse in" id="sidebar" style="padding: 0">
+      <app-side-menu xmlns="http://www.w3.org/1999/html"></app-side-menu>
+      </div>
+
+      <main class="col-md-10 col-xs-11 p-l-2 p-t-2" style="margin: 0 auto; background-color: white; padding: 20px">
+      <div class="row" style="padding: 15px 35px 15px 35px">
+        <div class="col-sm-12" style="background-color: white">
+          <div class="col-sm-11 about-body" >
+            <div class="about-head">
+              <h4>Tanzania commission for secondary schools</h4>
+            </div>
+          </div>
+          <div class="col-sm-11 about-body">
+            <h5>Background <i class="fa fa-backward"></i></h5>
+            <p class="paragraph">
+              The Tanzania Commission for Secondary Schools (TCSS) was established on 1st July 2018,
+              under the Secondary Act (Chapter 201 of the Laws of Tanzania) to succeed the
+              former Higher Education Accreditation Council which had been in operation since 1995.
+              It is a body corporate mandated to recognize, approve, register and accredit
+              Secondaries operating in Tanzania.
+            </p>
+
+            <h5>Our core functions <i class="fa fa-tasks"></i></h5>
+            <p class="paragraph">
+              Tanzania commission for secondary schools is responsible for controlling the admission af all students
+              completing ordinary level and passed to continue with advanced level. This was established for the main purpose
+              to ensure that all students who has qualified to join advanced schools to be selected in the first selection without
+              having may selections for a single entry
+            </p>
+
+            <h5>Mission <i class="fa fa-bullseye"></i></h5>
+            <p class="paragraph">
+              To provide the equality in education between private schools and government schools in Tanzania. Also to give
+              the room for those who needs to proceed with the government schools to remove the problem of selecting students
+              repeatedly (multiple selections) because of those who are selected to government schools but they don't report
+              and they join private schools.
+            </p>
           </div>
         </div>
-        <div class="col-sm-11 about-body">
-          <h5>Background <i class="fa fa-backward"></i></h5>
-          <p class="paragraph">
-            The Tanzania Commission for Secondary Schools (TCSS) was established on 1st July 2018,
-            under the Secondary Act (Chapter 201 of the Laws of Tanzania) to succeed the
-            former Higher Education Accreditation Council which had been in operation since 1995.
-            It is a body corporate mandated to recognize, approve, register and accredit
-            Secondaries operating in Tanzania.
-          </p>
-
-          <h5>Our core functions <i class="fa fa-tasks"></i></h5>
-          <p class="paragraph">
-            Tanzania commission for secondary schools is responsible for controlling the admission af all students
-            completing ordinary level and passed to continue with advanced level. This was established for the main purpose
-            to ensure that all students who has qualified to join advanced schools to be selected in the first selection without
-            having may selections for a single entry
-          </p>
-
-          <h5>Mission <i class="fa fa-bullseye"></i></h5>
-          <p class="paragraph">
-            To provide the equality in education between private schools and government schools in Tanzania. Also to give
-            the room for those who needs to proceed with the government schools to remove the problem of selecting students
-            repeatedly (multiple selections) because of those who are selected to government schools but they don't report
-            and they join private schools.
-          </p>
-        </div>
       </div>
-    </div>
+      </main>
+  </div>
   </div>
 </app-main>
 <router-outlet></router-outlet>
