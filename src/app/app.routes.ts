@@ -17,4 +17,4 @@ export const APP_ROUTES: Routes = [
     { path: 'about' , component: AboutComponent, canActivate: [AuthGuard]},
     { path: 'contacts', component: ContactsComponent, canActivate: [AuthGuard]},
     { path: 'staffs', component: CreateStaffComponent, canActivate: [AuthGuard]}
-];
+    ];
