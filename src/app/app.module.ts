@@ -33,6 +33,7 @@ import { AuthGuard} from './guards/auth.guard';
 import { CreateStaffComponent } from './create-staff/create-staff.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { SchoolsComponent } from './schools/schools.component';
+import { CreateSchoolsComponent } from './create-schools/create-schools.component';
 
 const server_address = 'http://127.0.0.1:8000/api/v1/';
 
@@ -56,6 +57,7 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
       CreateStaffComponent,
       SideMenuComponent,
       SchoolsComponent,
+      CreateSchoolsComponent,
 
   ],
   imports: [
