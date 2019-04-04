@@ -11,7 +11,22 @@
     background-color: whitesmoke;
     color: #282928;
     border: none;
-    /*border-color: #2c2c2c;*/
+    /*border-bottom: 1px solid #EAECEE;*/
+    white-space: nowrap;
+    font-size: small;
+    padding: 8px;
+    margin: 0 5px;
+}
+#sidebar a.list-group-item{
+    list-style-type: none;
+}
+
+#sidebar .list-group-item:hover{
+    border-radius: 0;
+    background-color: #D0E7FB;
+    color: #282928;
+    border: none;
+    /*border-bottom: 1px solid #EAECEE;*/
     white-space: nowrap;
     font-size: small;
     padding: 8px;
@@ -29,7 +44,8 @@
     font-family: FontAwesome;
     display: inline;
     text-align: right;
-    padding-left: 5px;
+    position: absolute;
+    right: 15px;
     border: none;
     font-size: small;
 }
@@ -44,7 +60,8 @@
     font-family: FontAwesome;
     display: inline;
     text-align: right;
-    padding-left: 15px;
+    position: absolute;
+    right: 15px;
 }
 
 /* level 1*/
