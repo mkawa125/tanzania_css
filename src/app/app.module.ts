@@ -10,6 +10,8 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SlickModule} from 'ngx-slick';
 import { HttpModule} from '@angular/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { APP_ROUTES} from './app.routes';
 
 // importing components
 import { HomeComponentComponent } from './home-component/home-component.component';
@@ -25,15 +27,15 @@ import { ContactsComponent } from './contacts/contacts.component';
 
 // importing services
 import { MessageService} from './services/message.service';
+import { LoginService} from './services/login.service';
+import { AdminComponent } from './dashboard/admin/admin.component';
+import { AuthGuard} from './guards/auth.guard';
+import { CreateStaffComponent } from './create-staff/create-staff.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
+import { SchoolsComponent } from './schools/schools.component';
+import { CreateSchoolsComponent } from './create-schools/create-schools.component';
 
-// Defining routes
-const AppRoutes: Routes = [
-    { path: '' , component: HomeComponentComponent},
-    { path: 'login' , component: LoginComponentComponent},
-    { path: 'reset-password', component: PasswordResetComponent},
-    { path: 'about' , component: AboutComponent},
-    { path: 'contacts', component: ContactsComponent}
-];
+const server_address = 'http://127.0.0.1:8000/api/v1/';
 
 @NgModule({
   declarations: [
@@ -51,12 +53,17 @@ const AppRoutes: Routes = [
       HeaderComponent,
       AboutComponent,
       ContactsComponent,
+      AdminComponent,
+      CreateStaffComponent,
+      SideMenuComponent,
+      SchoolsComponent,
+      CreateSchoolsComponent,
 
   ],
   imports: [
       BrowserModule,
-      RouterModule.forRoot(AppRoutes),
-      RouterModule.forChild(AppRoutes),
+      RouterModule.forRoot(APP_ROUTES),
+      RouterModule.forChild(APP_ROUTES),
       BrowserAnimationsModule,
       FormsModule,
       ReactiveFormsModule,
@@ -66,13 +73,19 @@ const AppRoutes: Routes = [
           timeOut: 2000,
           preventDuplicates: true,
       }),
+      NgxSpinnerModule,
       CarouselModule.forRoot(),
   ],
-    providers: [MessageService],
+    providers: [
+        MessageService,
+        LoginService,
+        AuthGuard,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
     slides = [
         {img: 'assets/images/africans.jpg'},
     ];
+    server_address = 'http://127.0.0.1:8000/api/v1/';
 }

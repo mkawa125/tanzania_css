@@ -1,2 +1,23 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
+
+#toast-container > div {
+    opacity: 1;
+}
+.toast {
+    font-size: small !important;
+    border: initial !important;
+    backdrop-filter: blur(0) !important;
+}
+.toast-success {
+    background-color: #51A351 !important;
+}
+.toast-error {
+    background-color: #BD362F !important;
+}
+.toast-info {
+    background-color: #2F96B4 !important;
+}
+.toast-warning {
+    background-color: #F89406 !important;
+}

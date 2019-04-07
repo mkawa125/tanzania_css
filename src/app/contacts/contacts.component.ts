@@ -5,6 +5,7 @@ import { ToastrService} from 'ngx-toastr';
 import { Contacts} from '../models/contacts';
 import { MessegeModel} from '../models/messegeModel';
 import { MessageService} from '../services/message.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 @Component({
@@ -23,6 +24,7 @@ export class ContactsComponent implements OnInit {
         private router: Router,
         private messageService: MessageService,
         private toast: ToastrService,
+        private spinner: NgxSpinnerService,
         private  fb: FormBuilder,
     ) {
     }
@@ -51,11 +53,29 @@ export class ContactsComponent implements OnInit {
         });
     }
     sendMessage(formData) {
-        this.messageService
-            .sendMessage(formData)
-            .subscribe(response => [
-                console.log(response)
-            ]);
+        try {
+            this.spinner.show();
+            console.log(formData);
+            this.messageService
+                .sendMessage(formData)
+                .subscribe(response => {
+                    console.log(response);
+                    this.spinner.hide();
+                    this.toast.success('Message Sent Successfully', 'Message Sent', {
+                        timeOut: 1500,
+                        positionClass: 'toast-top-right',
+                        progressBar: true,
+                    });
+                    this.formData.reset();
+                });
+        } catch {
+            this.spinner.hide();
+            this.toast.error('Message not sent', 'Failure', {
+                timeOut: 2000,
+                positionClass: 'toast-top-right',
+                progressBar: true,
+            });
+        }
     }
 }
 

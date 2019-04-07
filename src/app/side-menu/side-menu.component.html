@@ -1,0 +1,81 @@
+<div class="col-md-12  collapse in" id="sidebar" style="padding: 0" xmlns="http://www.w3.org/1999/html">
+  <div class="list-group panel">
+    <a href="#menu1" class="list-group-item collapsed profile"
+       data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"
+       style="box-shadow: 0 2px 2px 0 #707B7C; margin: 5px; background-color: #ABB2B9">
+      <span class="hidden-sm-down">
+        <img src="{{ profile }}" class="flag-icon rounded-circle" alt="No image">  {{ username }}
+      </span>
+    </a>
+    <div class="collapse" id="menu1">
+      <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">
+        <i class="fa fa-subway"></i> This is sub-2
+      </a>
+      <div class="collapse" id="menu1sub1">
+        <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 1 a</a>
+        <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 2 b</a>
+        <a href="#menu1sub1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem 3 c </a>
+        <div class="collapse" id="menu1sub1sub1">
+          <a href="#" class="list-group-item" data-parent="#menu1sub1sub1">Subitem 3 c.1</a>
+          <a href="#" class="list-group-item" data-parent="#menu1sub1sub1">Subitem 3 c.2</a>
+        </div>
+        <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 4 d</a>
+        <a href="#menu1sub1sub2" class="list-group-item" data-toggle="collapse"  aria-expanded="false">Subitem 5 e </a>
+        <div class="collapse" id="menu1sub1sub2">
+          <a href="#" class="list-group-item" data-parent="#menu1sub1sub2">Subitem 5 e.1</a>
+          <a href="#" class="list-group-item" data-parent="#menu1sub1sub2">Subitem 5 e.2</a>
+        </div>
+      </div>
+      <a href="#" class="list-group-item" data-parent="#menu1">
+        <i class="fa fa-cog"> </i> Settings
+      </a>
+      <a href="#" class="list-group-item" data-parent="#menu1">
+        <i class="fa fa-user"></i> Profile
+      </a>
+      <a class="list-group-item" href="#" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</a>
+
+    </div>
+
+    <a href="#schools" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+      <i class="fa fa-university"></i> <span class="hidden-sm-down"> Manage Schools </span></a>
+    <div class="collapse" id="schools">
+      <a routerLink="/schools" class="list-group-item" data-parent="#menu3"> <i class="fa fa-angle-double-right"></i> Primary schools</a>
+      <a routerLink="/schools"  class="list-group-item" data-parent="#menu3"><i class="fa fa-angle-double-right"></i> Secondary schools</a>
+      <a routerLink="/schools" class="list-group-item" data-parent="#menu3"><i class="fa fa-angle-double-right"></i> Advanced schools</a>
+    </div>
+
+
+    <a href="#menu3" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+      <i class="fa fa-graduation-cap"></i> <span class="hidden-sm-down"> Students </span></a>
+    <div class="collapse" id="menu3">
+      <a href="#" class="list-group-item" data-parent="#menu3"><i class="fa fa-angle-double-right"></i> Secondary students</a>
+      <a href="#" class="list-group-item" data-parent="#menu3"><i class="fa fa-angle-double-right"></i> Advanced students</a>
+    </div>
+
+    <a href="#staffs" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+      <i class="fa fa-user-circle-o"></i> <span class="hidden-sm-down"> Staffs </span></a>
+    <div class="collapse" id="staffs">
+      <a href="#" class="list-group-item" data-parent="#staffs"><i class="fa fa-angle-double-right"></i> Non-Teachers</a>
+      <a href="#" class="list-group-item" data-parent="#staffs"><i class="fa fa-angle-double-right"></i> Teachers</a>
+    </div>
+
+    <a href="#results" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+      <i class="fa fa-book"></i> <span class="hidden-sm-down"> Exam Results </span></a>
+    <div class="collapse" id="results">
+      <a href="#" class="list-group-item" data-parent="#results"><i class="fa fa-angle-double-right"></i> Primary Results</a>
+      <a href="#" class="list-group-item" data-parent="#results"><i class="fa fa-angle-double-right"></i> O-level Results</a>
+      <a href="#" class="list-group-item" data-parent="#results"><i class="fa fa-angle-double-right"></i> A-Level Results</a>
+    </div>
+
+    <a href="#admissions" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+      <i class="fa fa-tasks"></i> <span class="hidden-sm-down"> Admissions </span></a>
+    <div class="collapse" id="admissions">
+      <a href="#" class="list-group-item" data-parent="#admissions"><i class="fa fa-angle-double-right"></i> Primary</a>
+      <a href="#" class="list-group-item" data-parent="#admissions"><i class="fa fa-angle-double-right"></i> O-level</a>
+      <a href="#" class="list-group-item" data-parent="#admissions"><i class="fa fa-angle-double-right"></i> A-Level</a>
+    </div>
+    <a class="list-group-item" href="#" (click)="logout()" style="border-radius: 4px; text-align: center; list-style-type: none">
+      <i class="fa fa-sign-out"></i> Logout</a>
+
+  </div>
+</div>

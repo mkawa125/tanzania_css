@@ -1,0 +1,131 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+.flag-icon{
+    height: 30px;
+    width: 30px;
+}
+
+#sidebar .list-group-item {
+    border-radius: 0;
+    background-color: whitesmoke;
+    color: #282928;
+    border: none;
+    /*border-bottom: 1px solid #EAECEE;*/
+    white-space: nowrap;
+    font-size: small;
+    padding: 8px;
+    margin: 0 5px;
+}
+#sidebar a.list-group-item{
+    list-style-type: none;
+}
+
+#sidebar .list-group-item:hover{
+    border-radius: 0;
+    background-color: #D0E7FB;
+    color: #282928;
+    border: none;
+    /*border-bottom: 1px solid #EAECEE;*/
+    white-space: nowrap;
+    font-size: small;
+    padding: 8px;
+    margin: 0 5px;
+}
+
+/* highlight active menu */
+#sidebar .list-group-item:not(.collapsed) {
+    background-color: #ABB2B9;
+}
+
+/* closed state */
+#sidebar .list-group .list-group-item[aria-expanded="false"]::after {
+    content: " \f0d7";
+    font-family: FontAwesome;
+    display: inline;
+    text-align: right;
+    position: absolute;
+    right: 15px;
+    border: none;
+    font-size: small;
+}
+
+/* open state */
+#sidebar .list-group .list-group-item[aria-expanded="true"] {
+    background-color: #0F6289;
+    font-size: small;
+}
+#sidebar .list-group .list-group-item[aria-expanded="true"]::after {
+    content: " \f0da";
+    font-family: FontAwesome;
+    display: inline;
+    text-align: right;
+    position: absolute;
+    right: 15px;
+}
+
+/* level 1*/
+#sidebar .list-group .collapse .list-group-item  {
+    padding-left: 35px;
+    margin: 0 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+}
+
+/* level 2*/
+#sidebar .list-group .collapse > .collapse .list-group-item {
+    padding-left: 50px;
+
+}
+
+/* level 3*/
+#sidebar .list-group .collapse > .collapse > .collapse .list-group-item {
+    padding-left: 70px;
+}
+
+@media (max-width:48em) {
+    /* overlay sub levels on small screens */
+    #sidebar .list-group .collapse.in, #sidebar .list-group .collapsing {
+        position: absolute;
+        z-index: 1;
+        width: 190px;
+    }
+    #sidebar .list-group > .list-group-item {
+        text-align: center;
+        padding: .75rem .5rem;
+    }
+    /* hide caret icons of top level when collapsed */
+    #sidebar .list-group > .list-group-item[aria-expanded="true"]::after,
+    #sidebar .list-group > .list-group-item[aria-expanded="false"]::after {
+        display:none;
+    }
+}
+
+/* change transition animation to width when entire sidebar is toggled */
+#sidebar.collapse {
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    transition-duration: .2s;
+}
+
+#sidebar.collapsing {
+    opacity: 0.8;
+    width: 0;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-transition-property: width;
+    -o-transition-property: width;
+    transition-property: width;
+
+}
+.profile{
+    background-color: red;
+}
+@media (min-width: 520px) {
+
+}

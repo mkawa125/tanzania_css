@@ -12,16 +12,37 @@ nav {
     color: white;
     text-transform: capitalize;
 }
-.navbar-collapse ul.navbar-nav li.nav-item a.nav-link{
-    color: white;
-}
 .navbar-collapse ul.navbar-nav{
-    margin-left: 50%;
+    margin-left: 20%;
+    margin-top: 2px;
 }
 .navbar-collapse li.dropdown button{
     padding: 5px;
     font-size: small;
 }
+.navbar-brand{
+    text-align: center;
+    margin-left: 35px;
+}
 .flag-icon{
     width: 25px;
+}
+.navbar-collapse ul{
+    text-align: center;
+    margin-top: 10px;
+}
+.navbar-collapse ul.navbar-nav li.nav-item a.nav-link{
+    padding: 5px;
+    color: white;
+}
+.flag-icon{
+    height: 30px;
+    width: 30px;
+}
+.dropdown-menu li a{
+    font-size: small;
+}
+.dropdown-menu li{
+    border: 1px solid whitesmoke;
+    text-align: left;
 }
