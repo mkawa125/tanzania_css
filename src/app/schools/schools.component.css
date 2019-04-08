@@ -42,7 +42,9 @@ app-home-component{
 .general-head{
     padding: 10px;
     background-color: #A2D9CE;
-    border-bottom: 2px solid #138D75;
+    border-bottom: 1px solid #138D75;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 
 }
 .general-head h4{
@@ -103,6 +105,27 @@ app-home-component{
 }
 .pull-right{
     margin-bottom: 5px;
+}
+.filters-body{
+    font-size: smaller;
+    color: #808B96;
+}
+.filters-body select.form-control{
+    font-size: small;
+    color: #808B96;
+    padding: 2px;
+}
+
+.filters-body select option{
+    font-size: small;
+    color: #808B96;
+    padding: 2px;
+}
+
+.filters{
+    padding: 25px;
+    font-size: smaller;
+    background-color: whitesmoke;
 }
 @media (min-width: 520px) {
 
