@@ -95,6 +95,14 @@ app-home-component{
     border-radius: 4px;
     box-shadow: 0 2px 2px #CCD1D1;
     font-size: small;
+    padding: 15px;
+}
+.add{
+    font-size: small;
+    padding: 4px;
+}
+.pull-right{
+    margin-bottom: 5px;
 }
 @media (min-width: 520px) {
 
