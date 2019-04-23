@@ -1,8 +1,8 @@
 <app-header
   [navbarBrandRouterLink]="['/dashboard']"
   [fixed]="true"
-  [navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 89, height: 25, alt: 'CoreUI Logo'}"
-  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'CoreUI Logo'}"
+  [navbarBrandFull]="{src: logo, width: 60, height: 35, alt: 'TCSS Logo'}"
+  [navbarBrandMinimized]="{src: logo, width: 30, height: 30, alt: 'TCSS Logo'}"
   [sidebarToggler]="'lg'"
   [asideMenuToggler]="'lg'">
   <ul class="nav navbar-nav d-md-down-none">
@@ -25,7 +25,7 @@
     </li>
     <li class="nav-item dropdown" dropdown placement="bottom right">
       <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
-        <img src="{{ mkawa }}" class="" alt="No image" style="width: 35px; height: 35px; border-radius: 360px"/>
+        <img src="{{ avatar }}" class="" alt="No image" style="width: 35px; height: 35px; border-radius: 360px"/>
       </a>
       <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
         <div class="dropdown-header text-center"><strong>Account</strong></div>
@@ -88,7 +88,7 @@
           <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Today</div>
           <div class="list-group-item list-group-item-accent-warning list-group-item-divider">
             <div class="avatar float-right">
-              <img class="img-avatar" src="{{ mkawa}}" alt="No image">
+              <img class="img-avatar" src="{{ avatar}}" alt="No image">
             </div>
             <div>Meeting with
               <strong>Lucas</strong>
@@ -333,6 +333,6 @@
   </app-aside>
 </div>
 <app-footer>
-  <span><a href="https://coreui.io">CoreUI</a> &copy; 2018 creativeLabs.</span>
-  <span class="ml-auto">Powered by <a href="https://coreui.io/angular">CoreUI for Angular</a></span>
+  <span><a href="https://mkawa.host">Mkawa</a> &copy; 2018 MkSoftwares.</span>
+  <span class="ml-auto">Powered by <a href="https://mkawa.host">Mkawa coding coding community</a></span>
 </app-footer>

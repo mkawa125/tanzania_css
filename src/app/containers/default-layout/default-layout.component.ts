@@ -23,7 +23,8 @@ export class DefaultLayoutComponent implements OnDestroy {
       attributeFilter: ['class']
     });
   }
-  mkawa = '../assets/images/mkawa.jpg';
+  avatar = '../assets/images/mkawa.jpg';
+  logo = '../assets/images/logo-og.png';
 
   ngOnDestroy(): void {
     this.changes.disconnect();
