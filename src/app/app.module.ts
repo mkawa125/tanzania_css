@@ -18,7 +18,6 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MainComponent } from './main/main.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AboutComponent } from './about/about.component';
-import { ContactsComponent } from './contacts/contacts.component';
 
 // importing services
 import { MessageService} from './services/message.service';
@@ -75,7 +74,6 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
       StudentDetailsComponent,
       MainComponent,
       AboutComponent,
-      ContactsComponent,
       CreateStaffComponent,
       SideMenuComponent,
       SchoolsComponent,
