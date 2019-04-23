@@ -51,16 +51,16 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'primarySchools',
+        path: 'primary',
         loadChildren: './schools/schools.module#SchoolsModule'
       },
       {
-        path: 'secondarySchools',
-        loadChildren: './views/buttons/buttons.module#ButtonsModule'
+        path: 'secondary',
+        loadChildren: './schools/schools.module#SchoolsModule'
       },
       {
-        path: 'advancedSchools',
-        loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
+        path: 'advanced',
+        loadChildren: './schools/schools.module#SchoolsModule'
       },
       {
         path: 'dashboard',

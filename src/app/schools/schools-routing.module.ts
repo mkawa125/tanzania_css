@@ -11,7 +11,11 @@ const routes: Routes = [
     },
     children: [
       {
-        path: 'primary',
+        path: '',
+        redirectTo: 'schools'
+      },
+      {
+        path: 'schools',
         component: SchoolsComponent,
         data: {
           title: 'Primary'

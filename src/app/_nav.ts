@@ -41,12 +41,12 @@ export const navItems: NavData[] = [
   },
   {
     name: 'School',
-    url: '/base',
+    url: '/schools',
     icon: 'fa fa-university',
     children: [
       {
         name: 'Primary Schools',
-        url: '/Schools/primary',
+        url: '/schools/primary',
         icon: 'icon-puzzle'
       },
       {
