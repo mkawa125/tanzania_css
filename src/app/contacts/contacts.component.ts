@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router} from '@angular/router';
-import { FormControl, FormGroup, NgForm, Validators, FormBuilder} from '@angular/forms';
+import { FormControl, FormGroup, NgForm, ReactiveFormsModule, FormsModule, Validators, FormBuilder} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
 import { Contacts} from '../models/contacts';
 import { MessegeModel} from '../models/messegeModel';
