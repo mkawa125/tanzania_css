@@ -144,7 +144,17 @@ export const navItems: NavData[] = [
   },
   {
     title: true,
-    name: 'PROFILE',
+    name: 'OTHERS',
+  },
+  {
+    name: 'About tcss',
+    url: '/about',
+    icon: 'fa fa-history'
+  },
+  {
+    name: 'Contacts',
+    url: '/contacts',
+    icon: 'fa fa-phone'
   },
   {
     name: 'Setting',

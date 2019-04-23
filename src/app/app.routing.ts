@@ -81,6 +81,14 @@ export const routes: Routes = [
       {
         path: 'widgets',
         loadChildren: './views/widgets/widgets.module#WidgetsModule'
+      },
+      {
+        path: 'contacts',
+        loadChildren: './contacts/contacts.module#ContactsModule'
+      },
+      {
+        path: 'about',
+        loadChildren: './contacts/widgets.module#WidgetsModule'
       }
     ]
   },
