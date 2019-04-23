@@ -33,7 +33,7 @@ export const navItems: NavData[] = [
   {
     name: 'Dashboard',
     url: '/dashboard',
-    icon: 'icon-speedometer',
+    icon: 'fa fa-dashboard',
   },
   {
     title: true,
@@ -42,7 +42,7 @@ export const navItems: NavData[] = [
   {
     name: 'School',
     url: '/base',
-    icon: 'icon-puzzle',
+    icon: 'fa fa-university',
     children: [
       {
         name: 'Primary Schools',
@@ -64,7 +64,7 @@ export const navItems: NavData[] = [
   {
     name: 'Students',
     url: '/buttons',
-    icon: 'icon-cursor',
+    icon: 'fa fa-graduation-cap',
     children: [
       {
         name: 'Primary Students',
@@ -86,7 +86,7 @@ export const navItems: NavData[] = [
   {
     name: 'Staffs',
     url: '/icons',
-    icon: 'icon-star',
+    icon: 'fa fa-user',
     children: [
       {
         name: 'Non-Teachers',
@@ -103,7 +103,7 @@ export const navItems: NavData[] = [
   {
     name: 'Exam Results',
     url: '/notifications',
-    icon: 'icon-bell',
+    icon: 'fa fa-book',
     children: [
       {
         name: 'Primary',
@@ -125,7 +125,7 @@ export const navItems: NavData[] = [
   {
     name: 'Admissions',
     url: '/notifications',
-    icon: 'icon-bell',
+    icon: 'fa fa-tasks',
     children: [
       {
         name: 'Primary',
@@ -149,16 +149,16 @@ export const navItems: NavData[] = [
   {
     name: 'Setting',
     url: '/charts',
-    icon: 'icon-pie-chart'
+    icon: 'fa fa-cog'
   },
   {
     name: 'my profile',
     url: '/charts',
-    icon: 'icon-pie-chart'
+    icon: 'fa fa-user-circle-o'
   },
   {
     name: 'Logout',
     url: '/charts',
-    icon: 'icon-pie-chart'
+    icon: 'fa fa-sign-out'
   },
 ];
