@@ -88,7 +88,7 @@ export const routes: Routes = [
       },
       {
         path: 'about',
-        loadChildren: './contacts/widgets.module#WidgetsModule'
+        loadChildren: './about/about.module#AboutModule'
       }
     ]
   },
