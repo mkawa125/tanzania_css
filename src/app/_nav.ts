@@ -46,17 +46,17 @@ export const navItems: NavData[] = [
     children: [
       {
         name: 'Primary Schools',
-        url: '/base/cards',
+        url: '/Schools/primary',
         icon: 'icon-puzzle'
       },
       {
         name: 'Secondary Schools',
-        url: '/base/carousels',
+        url: '/schools/secondary',
         icon: 'icon-puzzle'
       },
       {
         name: 'Advanced Schools',
-        url: '/base/collapses',
+        url: '/schools/advanced',
         icon: 'icon-puzzle'
       },
     ],

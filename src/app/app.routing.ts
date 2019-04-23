@@ -51,15 +51,15 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'base',
-        loadChildren: './views/base/base.module#BaseModule'
+        path: 'primarySchools',
+        loadChildren: './schools/schools.module#SchoolsModule'
       },
       {
-        path: 'buttons',
+        path: 'secondarySchools',
         loadChildren: './views/buttons/buttons.module#ButtonsModule'
       },
       {
-        path: 'charts',
+        path: 'advancedSchools',
         loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
       },
       {
