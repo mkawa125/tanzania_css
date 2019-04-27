@@ -26,3 +26,21 @@
 .input-group input::placeholder{
     color: #ABB2B9;
 }
+.form-group select option{
+    font-size: small;
+    color: #ABB2B9;
+}
+.form-control select.form-control{
+    font-size: small;
+    color: #ABB2B9;
+    border-radius: 0;
+}
+.form-check-label{
+    font-size: small;
+}
+.form-check-label input{
+
+}
+.form-check label.form-check-label input.form-check-input{
+    margin-right: 415px;
+}

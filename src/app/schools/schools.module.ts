@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { SchoolsRoutingModule } from './schools-routing.module';
 import { SchoolsComponent} from './schools.component';
@@ -9,7 +10,9 @@ import { CreateSchoolComponent} from './create-school/create-school.component';
   declarations: [SchoolsComponent, CreateSchoolComponent],
   imports: [
     CommonModule,
-    SchoolsRoutingModule
+    SchoolsRoutingModule,
+      FormsModule,
+      ReactiveFormsModule,
   ]
 })
 export class SchoolsModule { }

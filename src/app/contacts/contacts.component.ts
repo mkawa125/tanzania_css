@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import { FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
-import { MessegeModel} from '../models/messegeModel';
 import { MessageService} from '../services/message.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 
