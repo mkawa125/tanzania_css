@@ -26,7 +26,35 @@ export class CreateSchoolComponent implements OnInit {
       ])),
       region: new FormControl('', Validators.compose([
           Validators.required
-      ]))
+      ])),
+      district: new FormControl('', Validators.compose([
+        Validators.required
+      ])),
+      ward: new FormControl('', Validators.compose([
+        Validators.required
+      ])),
+      schoolName: new FormControl('', Validators.compose([
+          Validators.required,
+      ])),
+      level: new FormControl('', Validators.compose([
+        Validators.required,
+      ])),
+
+      gender: new FormControl('', Validators.compose([
+        Validators.required,
+      ])),
+
+      dateStarted: new FormControl('', Validators.compose([
+        Validators.required,
+      ])),
+
+      ownership: new FormControl('', Validators.compose([
+        Validators.required,
+      ])),
+
+      schoolType: new FormControl('', Validators.compose([
+        Validators.required,
+      ])),
     });
   }
 
