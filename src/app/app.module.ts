@@ -24,9 +24,6 @@ import { LoginService} from './services/login.service';
 import { AuthGuard} from './guards/auth.guard';
 import { CreateStaffComponent } from './create-staff/create-staff.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
-import { SchoolsComponent } from './schools/schools.component';
-import { CreateSchoolsComponent } from './create-schools/create-schools.component';
-import { CreateSchoolComponent } from './schools/create-school/create-school.component';
 
 // core ui modules
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -74,9 +71,6 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
       MainComponent,
       CreateStaffComponent,
       SideMenuComponent,
-      SchoolsComponent,
-      CreateSchoolsComponent,
-      CreateSchoolComponent,
       AppComponent,
       ...APP_CONTAINERS,
       P404Component,

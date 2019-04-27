@@ -51,15 +51,7 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'primary',
-        loadChildren: './schools/schools.module#SchoolsModule'
-      },
-      {
-        path: 'secondary',
-        loadChildren: './schools/schools.module#SchoolsModule'
-      },
-      {
-        path: 'advanced',
+        path: 'schools',
         loadChildren: './schools/schools.module#SchoolsModule'
       },
       {
