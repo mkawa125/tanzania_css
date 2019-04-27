@@ -17,7 +17,6 @@ app-home-component{
     text-align: center;
 }
 .quick-links{
-    background-color: #B7C8E3;
     background-color: whitesmoke;
     min-height: 205px;
     border-bottom: 1px solid #CCD1D1;
@@ -42,7 +41,9 @@ app-home-component{
 .general-head{
     padding: 10px;
     background-color: #A2D9CE;
-    border-bottom: 2px solid #138D75;
+    border-bottom: 1px solid #138D75;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 
 }
 .general-head h4{
@@ -52,10 +53,11 @@ app-home-component{
 .filters{
     background-color: white;
     min-height: 205px;
-    border: 1px solid #CCD1D1;
     font-size: small;
-    box-shadow: 0 1px 1px 0 #CCD1D1;
+    box-shadow: 0 2px 2px 0 #E5E8E8;
     padding: 10px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 .filters .row{
     padding: 5px;
@@ -91,10 +93,53 @@ app-home-component{
     width: 30px;
 }
 .content{
-    border: 1px solid whitesmoke;
-    border-radius: 4px;
-    box-shadow: 0 2px 2px #CCD1D1;
+    border: 1px solid #E5E8E8;
+    border-radius: 0;
+    box-shadow: 0 2px 2px 0 #E5E8E8;
     font-size: small;
+    padding: 25px;
+}
+.add{
+    font-size: small;
+    padding: 4px;
+    float: right;
+}
+
+.content-head{
+    border: 1px solid #E5E8E8;
+    border-radius: 0;
+    font-size: small;
+    text-align: right;
+    padding: 8px 25px;
+    background-color: whitesmoke;
+}
+.content-head a{
+    border-radius: 4px;
+    font-size: small;
+}
+.pull-right{
+    margin-bottom: 5px;
+}
+.filters-body{
+    font-size: smaller;
+    color: #808B96;
+}
+.filters-body select.form-control{
+    font-size: small;
+    color: #808B96;
+    padding: 2px;
+}
+
+.filters-body select option{
+    font-size: small;
+    color: #808B96;
+    padding: 2px;
+}
+
+.filters{
+    padding: 25px;
+    font-size: smaller;
+    background-color: whitesmoke;
 }
 @media (min-width: 520px) {
 

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router} from '@angular/router';
-import { FormControl, FormGroup, NgForm, Validators, FormBuilder} from '@angular/forms';
+import { Router} from '@angular/router';
+import { FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
-import { Contacts} from '../models/contacts';
-import { MessegeModel} from '../models/messegeModel';
 import { MessageService} from '../services/message.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -30,7 +28,6 @@ export class ContactsComponent implements OnInit {
     }
 
     public headers = new Headers({'Content-Type': 'application/json'});
-    message_model = new MessegeModel();
 
     ngOnInit() {
         this.formData = new FormGroup({

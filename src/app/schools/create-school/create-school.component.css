@@ -1,0 +1,49 @@
+@import "~ngx-toastr/toastr.css";
+
+
+.form{
+    margin: 25px auto;
+    background-color: white;
+    font-size: small;
+    padding: 0;
+}
+.form-body{
+    margin: 0 auto;
+    padding: 15px;
+}
+.form-head h4 {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+.form-head{
+    background-color: rebeccapurple;
+}
+.input-group input.form-control{
+    font-size: small;
+    font-family: 'Andika', sans-serif;
+    /*background-color: #E9EFFB;*/
+}
+.input-group input::placeholder{
+    color: #ABB2B9;
+}
+.form-group select option{
+    font-size: small;
+    color: #ABB2B9;
+}
+.form-control select.form-control{
+    font-size: small;
+    color: #ABB2B9;
+    border-radius: 0;
+}
+.form-check-label{
+    font-size: small;
+}
+.form-check-label input{
+
+}
+.form-check label.form-check-label input.form-check-input{
+    margin-right: 415px;
+}

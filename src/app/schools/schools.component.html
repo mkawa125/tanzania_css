@@ -1,25 +1,117 @@
-<app-main xmlns="http://www.w3.org/1999/html">
-  <div class="col-sm-11" style="margin: 0 auto; background-color: whitesmoke; padding: 0; border: 1px solid lightsteelblue">
+<div class="col-sm-11"
+     style="margin: 0 auto; background-color: whitesmoke; padding: 0; border: 1px solid lightsteelblue" xmlns="">
     <div class="row" style="padding: 0 15px">
       <div class="col-md-2  collapse in" id="sidebar" style="padding: 0">
-        <app-side-menu xmlns="http://www.w3.org/1999/html"></app-side-menu>
       </div>
-      <main class="col-md-10 col-xs-11 p-l-2 p-t-2" style="margin: 0 auto; background-color: white; padding: 0 auto">
+      <main class="col-md-12 col-xs-11 p-l-2 p-t-2" style="margin: 0 auto; background-color: white; padding: 0 auto">
         <div class="row" style="padding: 25px">
           <div class="col-sm-12">
             <div class="row" style="background-color: white; padding: 1px">
               <div class="col-sm-3" style="margin-bottom: 25px">
                 <div class="general-head">
-                  <h4><i class="fa fa-filter"></i> Filters</h4>
+                  <h4><strong><i class="fa fa-filter" style="float: left"></i> Advanced filter Options</strong></h4>
                 </div>
                 <div class="filters">
-                  All filters goes here
+                  <div class="filters-body">
+                    <label for="schoolType"><strong>School Type</strong></label>
+                    <form action="#" method="post">
+                      <select id="schoolType" formControlName="schoolType" name="schoolType" class="form-control">
+                        <option value="All" selected>All</option>
+                        <option value="Day">Day</option>
+                        <option value="Boarding">Boarding</option>
+                      </select>
+
+                      <label for="gender"><strong>Gender Type</strong></label>
+                      <select id="gender" formControlName="gender" name="gender" class="form-control">
+                        <option value="All" selected>All</option>
+                        <option value="Core">Core</option>
+                        <option value="Single">Single</option>
+                        <option value="Girls">Girls</option>
+                        <option value="Boys">Boys</option>
+                      </select>
+
+                      <button class="btn btn-primary btn-block" style="font-size: small; padding: 4px; margin-top: 5px">Filter</button>
+                    </form>
+                    </div>
                 </div>
               </div>
 
               <div class="col-sm-9">
+                <div class="col-md-12 content-head">
+                  <a class="btn btn-success"  routerLink="/schools/create"><i class="fa fa-plus-circle"></i> Add School</a>
+                </div>
                 <div class="col-md-12 content">
-                    ghsadjas
+                    <table class="table table-sm table-striped table-bordered" id="myTable">
+                      <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>RegNumber</th>
+                        <th>Location</th>
+                        <th>SchoolType</th>
+                        <th>GenderOrientation</th>
+                        <th>Actions</th>
+                      </tr>
+                      </thead>
+
+                      <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Msata sec school</td>
+                        <td>s1968</td>
+                        <td>Bagamoyo</td>
+                        <td>Boarding</td>
+                        <td>core</td>
+                        <td>
+                          <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
+                          <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
+                          <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>2</td>
+                        <td>Msata sec school</td>
+                        <td>s1968</td>
+                        <td>Bagamoyo</td>
+                        <td>Boarding</td>
+                        <td>core</td>
+                        <td>
+                          <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
+                          <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
+                          <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>3</td>
+                        <td>Msata sec school</td>
+                        <td>s1968</td>
+                        <td>Bagamoyo</td>
+                        <td>Boarding</td>
+                        <td>core</td>
+                        <td>
+                          <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
+                          <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
+                          <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>4</td>
+                        <td>Msata sec school</td>
+                        <td>s1968</td>
+                        <td>Bagamoyo</td>
+                        <td>Boarding</td>
+                        <td>core</td>
+                        <td>
+                          <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
+                          <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
+                          <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
                 </div>
               </div>
             </div>
@@ -28,5 +120,3 @@
       </main>
     </div>
   </div>
-</app-main>
-<router-outlet></router-outlet>

@@ -47,8 +47,12 @@
             "styles": [
               "./node_modules/ngx-toastr/toastr.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/scss/style.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["./node_modules"]
+            },
             "scripts": []
           },
           "configurations": {

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $;
+
 @Component({
   selector: 'app-schools',
   templateUrl: './schools.component.html',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SchoolsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    $(document).ready(function() {
+      $('#myTable').DataTable();
+    } );
+  }
 
   ngOnInit() {
   }
