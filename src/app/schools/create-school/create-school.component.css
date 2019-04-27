@@ -1,3 +1,6 @@
+@import "~ngx-toastr/toastr.css";
+
+
 .form{
     margin: 25px auto;
     background-color: white;
