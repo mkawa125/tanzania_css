@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SchoolsComponent} from './schools.component';
+import { CreateSchoolComponent} from './create-school/create-school.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,7 @@ const routes: Routes = [
         redirectTo: 'schools'
       },
       {
-        path: 'schools',
+        path: 'primary',
         component: SchoolsComponent,
         data: {
           title: 'Primary'
@@ -35,7 +36,14 @@ const routes: Routes = [
           title: 'Advanced'
         }
       },
-    ]
+      {
+        path: 'create',
+        component: CreateSchoolComponent,
+        data: {
+          title: 'Create School',
+        },
+      },
+    ],
   }
 ];
 

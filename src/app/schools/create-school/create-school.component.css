@@ -1,0 +1,28 @@
+.form{
+    margin: 0 auto;
+    background-color: white;
+    font-size: small;
+    padding: 0;
+}
+.form-body{
+    margin: 0 auto;
+    padding: 15px;
+}
+.form-head h4 {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+.form-head{
+    background-color: rebeccapurple;
+}
+.input-group input.form-control{
+    font-size: small;
+    font-family: 'Andika', sans-serif;
+    /*background-color: #E9EFFB;*/
+}
+.input-group input::placeholder{
+    color: #ABB2B9;
+}

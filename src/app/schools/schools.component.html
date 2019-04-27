@@ -30,20 +30,6 @@
                         <option value="Boys">Boys</option>
                       </select>
 
-                      <label for="location"><strong>Location</strong></label>
-                      <select id="location" formControlName="location" name="location" class="form-control">
-                        <option value="All" selected>All</option>
-                        <option value="Day">Day</option>
-                        <option value="Boarding">Boarding</option>
-                      </select>
-
-                      <label for="ownership"><strong>Ownership</strong></label>
-                      <select id="ownership" formControlName="ownership" name="ownership" class="form-control">
-                        <option value="All" selected>All</option>
-                        <option value="Government">Government</option>
-                        <option value="Private">Private</option>
-                      </select>
-
                       <button class="btn btn-primary btn-block" style="font-size: small; padding: 4px; margin-top: 5px">Filter</button>
                     </form>
                     </div>
@@ -51,10 +37,10 @@
               </div>
 
               <div class="col-sm-9">
+                <div class="col-md-12 content-head">
+                  <a class="btn btn-success"  routerLink="/schools/create"><i class="fa fa-plus-circle"></i> Add School</a>
+                </div>
                 <div class="col-md-12 content">
-                  <!--<div class="pull-right">-->
-                    <!--<a class="btn btn-success add"  routerLink="/schools/create"><i class="fa fa-plus-circle"></i> Add School</a>-->
-                  <!--</div>-->
                     <table class="table table-sm table-striped table-bordered" id="myTable">
                       <thead>
                       <tr>

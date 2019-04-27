@@ -1,3 +1,78 @@
-<p>
-  create-school works!
-</p>
+<div class="col-md-7 form">
+  <div class="form-head">
+    <h4>
+    Create New School
+    </h4>
+  </div>
+  <div class="col-md-11 form-body">
+    <form>
+      <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label"><strong>School Name <i class="text-danger"> *</i></strong> </label>
+        <div class="col-sm-9 input-group">
+          <input type="text" formControlName="schoolName" class="form-control-sm form-control" id="name" placeholder="school name">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="regNumber" class="col-sm-3 col-form-label"><strong>Reg Number <i class="text-danger"> *</i></strong> </label>
+        <div class="col-sm-9 input-group">
+          <input type="text" formControlName="regNumber" class="form-control-sm form-control" id="regNumber" placeholder="Registration number">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label"><strong>Location <i class="text-danger"> *</i></strong> </label>
+        <div class="col-sm-9 input-group">
+          <div class="row">
+              <select id="region" formControlName="region" class=" col-md-4 form-control">
+                <option>--choose region--</option>
+                <option>--choose region--</option>
+                <option>--choose region--</option>
+                <option>--choose region--</option>
+                <option>--choose region--</option>
+                <option>--choose region--</option>
+              </select>
+
+            <select id="district" formControlName="district" class=" col-md-4 form-control">
+              <option>--choose region--</option>
+              <option>--choose region--</option>
+              <option>--choose region--</option>
+              <option>--choose region--</option>
+              <option>--choose region--</option>
+              <option>--choose region--</option>
+            </select>
+
+            <select id="ward" formControlName="ward" class=" col-md-4 form-control">
+              <option>--choose region--</option>
+              <option>--choose region--</option>
+              <option>--choose region--</option>
+              <option>--choose region--</option>
+              <option>--choose region--</option>
+              <option>--choose region--</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label"><strong>School Name <i class="text-danger"> *</i></strong> </label>
+        <div class="col-sm-9 input-group">
+          <input type="text" formControlName="schoolName" class="form-control-sm form-control" id="name" placeholder="school name">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label"><strong>School Name <i class="text-danger"> *</i></strong> </label>
+        <div class="col-sm-9 input-group">
+          <input type="text" formControlName="schoolName" class="form-control-sm form-control" id="name" placeholder="school name">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label"> </label>
+        <div class="col-sm-9 input-group">
+          <button class="btn btn-block btn-success" type="submit"> Save </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
