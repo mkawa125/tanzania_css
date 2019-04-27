@@ -10,9 +10,9 @@ declare var $;
 export class SchoolsComponent implements OnInit {
 
   constructor() {
-    $(function () {
+    $(document).ready(function() {
       $('#myTable').DataTable();
-    });
+    } );
   }
 
   ngOnInit() {

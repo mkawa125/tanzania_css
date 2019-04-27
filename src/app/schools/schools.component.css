@@ -93,11 +93,11 @@ app-home-component{
     width: 30px;
 }
 .content{
-    border: 1px solid whitesmoke;
+    border: 1px solid #E5E8E8;
     border-radius: 4px;
     box-shadow: 0 2px 2px 0 #E5E8E8;
     font-size: small;
-    padding: 15px;
+    padding: 25px;
 }
 .add{
     font-size: small;
