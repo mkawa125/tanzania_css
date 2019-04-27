@@ -17,7 +17,7 @@ export class SchoolService {
   }
   createSchool(formData) {
     const data = JSON.stringify(formData);
-    return this.http.post(this.server + 'createSchool', data, this.options).map(
+    return this.http.post(this.server + 'schools', data, this.options).map(
         res => res.json()
     );
   }
