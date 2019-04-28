@@ -33,14 +33,14 @@ export class CreateSchoolComponent implements OnInit {
       ward: new FormControl('', Validators.compose([
         Validators.required
       ])),
-      schoolName: new FormControl('', Validators.compose([
+      name: new FormControl('', Validators.compose([
           Validators.required,
       ])),
       level: new FormControl('', Validators.compose([
         Validators.required,
       ])),
 
-      gender: new FormControl('', Validators.compose([
+      genderOrientation: new FormControl('', Validators.compose([
         Validators.required,
       ])),
 

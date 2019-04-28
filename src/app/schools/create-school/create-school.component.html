@@ -9,7 +9,7 @@
       <div class="form-group row">
         <label for="name" class="col-sm-3 col-form-label"><strong>School Name <i class="text-danger"> *</i></strong> </label>
         <div class="col-sm-9 input-group">
-          <input type="text" formControlName="schoolName" class="form-control-sm form-control" id="name" placeholder="school name">
+          <input type="text" formControlName="name" class="form-control-sm form-control" id="name" placeholder="school name">
         </div>
       </div>
 
@@ -64,17 +64,17 @@
         <div class="col-sm-9 input-group">
             <div class="form-check-inline">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" formControlName="level" id="level" value="primary">Primary
+                    <input type="checkbox" class="form-check-input" name="level" formControlName="level" id="level" value="primary">Primary
                 </label>
             </div>
             <div class="form-check-inline">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" formControlName="level" value="secondary">secondary
+                    <input type="checkbox" class="form-check-input" name="level" formControlName="level" value="secondary">secondary
                 </label>
             </div>
             <div class="form-check-inline">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" formControlName="level" value="advance">Advance
+                    <input type="checkbox" class="form-check-input" name="level" formControlName="level" value="advance">Advance
                 </label>
             </div>
         </div>
@@ -85,17 +85,17 @@
         <div class="col-sm-9 input-group">
             <div class="form-check-inline">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="gender" formControlName="gender" id="gender" value="core"> Core
+                    <input type="radio" class="form-check-input" name="genderOrientation" formControlName="genderOrientation" id="gender" value="core"> Core
                 </label>
             </div>
             <div class="form-check-inline">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="gender" formControlName="gender" value="boys"> Boys
+                    <input type="radio" class="form-check-input" name="genderOrientation" formControlName="genderOrientation" value="boys"> Boys
                 </label>
             </div>
             <div class="form-check-inline">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="gender" formControlName="gender" value="girls"> Girls
+                    <input type="radio" class="form-check-input" name="genderOrientation" formControlName="genderOrientation" value="girls"> Girls
                 </label>
             </div>
         </div>

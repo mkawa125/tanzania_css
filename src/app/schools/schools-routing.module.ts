@@ -16,12 +16,10 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'schools',
-        canActivate: [AuthGuard],
       },
       {
         path: 'primary',
         component: SchoolsComponent,
-        canActivate: [AuthGuard],
         data: {
           title: 'Primary'
         }
@@ -29,7 +27,6 @@ const routes: Routes = [
       {
         path: 'secondary',
         component: SchoolsComponent,
-        canActivate: [AuthGuard],
         data: {
           title: 'Secondary'
         }
@@ -37,7 +34,6 @@ const routes: Routes = [
       {
         path: 'advanced',
         component: SchoolsComponent,
-        canActivate: [AuthGuard],
         data: {
           title: 'Advanced'
         }
@@ -45,7 +41,6 @@ const routes: Routes = [
       {
         path: 'create',
         component: CreateSchoolComponent,
-        canActivate: [AuthGuard],
         data: {
           title: 'Create School',
         },
