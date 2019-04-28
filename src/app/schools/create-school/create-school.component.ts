@@ -72,7 +72,7 @@ export class CreateSchoolComponent implements OnInit {
                 positionClass: 'toast-top-right',
                 progressBar: true,
               });
-              this.route.navigate(['/schools/primary']);
+              this.route.navigate(['/schools/secondary']);
         },
             error => { console.log(error);
             this.spinner.hide();
@@ -80,7 +80,7 @@ export class CreateSchoolComponent implements OnInit {
                     timeOut: 2000,
                     positionClass: 'toast-top-right',
                     progressBar: true,
-                  });
+              });
         });
   }
 }

@@ -16,6 +16,7 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'schools',
+        component: SchoolsComponent,
       },
       {
         path: 'primary',

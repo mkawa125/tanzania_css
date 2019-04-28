@@ -21,4 +21,9 @@ export class SchoolService {
         res => res.json()
     );
   }
+  getAllPrimarySchools() {
+    return this.http.get(this.server  + 'schools', this.options).map(
+        res => res.json()
+    );
+  }
 }
