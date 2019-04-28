@@ -3,6 +3,7 @@ import {FormGroup, Validator, FormControl, FormBuilder, Validators} from '@angul
 import { ToastrService} from 'ngx-toastr';
 import { SchoolService} from '../../services/school.service';
 import { NgxSpinnerService} from 'ngx-spinner';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'fmyp-create-school',
@@ -16,6 +17,7 @@ export class CreateSchoolComponent implements OnInit {
       private toast: ToastrService,
       private schoolService: SchoolService,
       private spinner: NgxSpinnerService,
+      private route: Router,
   ) { }
 
   ngOnInit() {
@@ -59,29 +61,26 @@ export class CreateSchoolComponent implements OnInit {
   }
 
   createSchool(formData) {
-    try {
-      this.spinner.show();
-      console.log(formData);
-      this.schoolService
-          .createSchool(formData)
-          .subscribe(response => {
-            console.log(response);
+    this.spinner.show();
+    this.schoolService.createSchool(formData)
+        .subscribe(
+            response => {
+              console.log(response);
+              this.spinner.hide();
+              this.toast.success('School Successfully added', 'School Created', {
+                timeOut: 1500,
+                positionClass: 'toast-top-right',
+                progressBar: true,
+              });
+              this.route.navigate(['/schools/primary']);
+        },
+            error => { console.log(error);
             this.spinner.hide();
-            this.toast.success('School Successfully added', 'School Created', {
-              timeOut: 1500,
-              positionClass: 'toast-top-right',
-              progressBar: true,
-            });
-            this.formData.reset();
-          });
-    } catch (e) {
-      console.log(e);
-      this.spinner.hide();
-      this.toast.error('School Not Created', 'Failure', {
-        timeOut: 2000,
-        positionClass: 'toast-top-right',
-        progressBar: true,
-      });
-    }
+              this.toast.error('School Not Created', 'Failure', {
+                    timeOut: 2000,
+                    positionClass: 'toast-top-right',
+                    progressBar: true,
+                  });
+        });
   }
 }
