@@ -34,6 +34,7 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { LoginComponentModule} from './login-component/login-component.module';
 
 
 const APP_CONTAINERS = [
@@ -77,6 +78,7 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
   ],
   imports: [
       BrowserModule,
+      LoginComponentModule,
       BrowserAnimationsModule,
       FormsModule,
       ReactiveFormsModule,
