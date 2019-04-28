@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
+import { LoginComponentComponent} from './login-component/login-component.component';
+
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
-import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { AuthGuard} from './guards/auth.guard';
 
 export const routes: Routes = [
   {
@@ -31,21 +33,33 @@ export const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent,
+    component: LoginComponentComponent,
     data: {
       title: 'Login Page'
     }
+  },
+  {
+    path: 'logout',
+    canActivate: [AuthGuard],
+    component: LoginComponentComponent
+  },
+  {
+    path: 'login',
+    canActivate: [AuthGuard],
+    component: LoginComponentComponent
   },
   {
     path: 'register',
     component: RegisterComponent,
     data: {
       title: 'Register Page'
-    }
+    },
+    canActivate: [AuthGuard],
   },
   {
     path: '',
     component: DefaultLayoutComponent,
+    canActivate: [AuthGuard],
     data: {
       title: 'Home'
     },
@@ -81,7 +95,7 @@ export const routes: Routes = [
       {
         path: 'about',
         loadChildren: './about/about.module#AboutModule'
-      }
+      },
     ]
   },
   { path: '**', component: P404Component }

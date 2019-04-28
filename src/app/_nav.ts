@@ -168,7 +168,7 @@ export const navItems: NavData[] = [
   },
   {
     name: 'Logout',
-    url: '/charts',
+    url: '/login',
     icon: 'fa fa-sign-out'
   },
 ];

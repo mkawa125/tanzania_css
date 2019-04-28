@@ -4,7 +4,7 @@ import {LoginComponentComponent} from './login-component.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'login',
     component: LoginComponentComponent,
     data: {
       title: 'About TCSS'

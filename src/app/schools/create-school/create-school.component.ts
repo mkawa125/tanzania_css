@@ -59,13 +59,29 @@ export class CreateSchoolComponent implements OnInit {
   }
 
   createSchool(formData) {
-    this.spinner.show();
-    console.log(formData);
-    this.toast.success('School Successfully added', 'School Created', {
-      timeOut: 1500,
-      positionClass: 'toast-top-right',
-      progressBar: true,
-    });
-    this.formData.reset();
+    try {
+      this.spinner.show();
+      console.log(formData);
+      this.schoolService
+          .createSchool(formData)
+          .subscribe(response => {
+            console.log(response);
+            this.spinner.hide();
+            this.toast.success('School Successfully added', 'School Created', {
+              timeOut: 1500,
+              positionClass: 'toast-top-right',
+              progressBar: true,
+            });
+            this.formData.reset();
+          });
+    } catch (e) {
+      console.log(e);
+      this.spinner.hide();
+      this.toast.error('School Not Created', 'Failure', {
+        timeOut: 2000,
+        positionClass: 'toast-top-right',
+        progressBar: true,
+      });
+    }
   }
 }
