@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes} from '@angular/router';
 import { ToastrModule} from 'ngx-toastr';
-import { LoginComponentComponent } from './login-component/login-component.component';
 
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -28,7 +26,6 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 // core ui modules
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 // Import containers
 import { DefaultLayoutComponent } from './containers';
@@ -64,7 +61,6 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
 @NgModule({
   declarations: [
       AppComponent,
-      LoginComponentComponent,
       HomeComponentComponent,
       PasswordResetComponent,
       StudentDetailsComponent,

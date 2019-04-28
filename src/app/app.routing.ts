@@ -4,17 +4,19 @@ import { Routes, RouterModule } from '@angular/router';
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
 
+
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-import {AuthGuard} from './guards/auth.guard';
+import { AuthGuard} from './guards/auth.guard';
 
 export const routes: Routes = [
   {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
+    runGuardsAndResolvers: 'always',
     canActivate: [AuthGuard],
   },
   {
@@ -50,6 +52,7 @@ export const routes: Routes = [
     path: '',
     canActivate: [AuthGuard],
     component: DefaultLayoutComponent,
+    runGuardsAndResolvers: 'always',
     data: {
       title: 'Home'
     },
@@ -93,6 +96,16 @@ export const routes: Routes = [
         path: 'about',
         canActivate: [AuthGuard],
         loadChildren: './about/about.module#AboutModule'
+      },
+      {
+        path: 'logout',
+        canActivate: [AuthGuard],
+        loadChildren: './login-component/login-component.module#LoginComponentModule'
+      },
+      {
+        path: 'login',
+        canActivate: [AuthGuard],
+        loadChildren: './login-component/login-component.module#LoginComponentModule'
       }
     ]
   },
