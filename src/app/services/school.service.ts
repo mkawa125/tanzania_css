@@ -26,4 +26,9 @@ export class SchoolService {
         res => res.json()
     );
   }
+  deleteSchool(schoolId) {
+    return this.http.delete(this.server + 'schools/' + schoolId).map(
+        res => res.json(),
+    );
+  }
 }
