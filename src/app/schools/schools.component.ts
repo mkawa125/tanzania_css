@@ -23,9 +23,21 @@ export class SchoolsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.spinner.show();
+    this.schoolService.getAllPrimarySchools().subscribe(
+        response => {
+          console.log(response);
+          this.spinner.hide();
+        }
+    );
   }
   getPrimarySchools() {
     this.spinner.show();
-    this.schoolService.getAllPrimarySchools().subscribe();
+    this.schoolService.getAllPrimarySchools().subscribe(
+        response => {
+          console.log(response);
+          this.spinner.hide();
+        }
+    );
   }
 }
