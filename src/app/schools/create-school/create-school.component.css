@@ -15,11 +15,12 @@
     text-align: center;
     padding: 15px;
     font-size: 14px;
-    color: white;
+    color: #555B5C;
     font-weight: bold;
 }
 .form-head{
-    background-color: rebeccapurple;
+    padding: 15px;
+    border-bottom: 2px solid #555B5C;
 }
 .input-group input.form-control{
     font-size: small;
@@ -46,4 +47,13 @@
 }
 .form-check label.form-check-label input.form-check-input{
     margin-right: 415px;
+}
+.col-form-label{
+    font-family: cursive;
+    color: #555B5C;
+}
+.school-image{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
 }

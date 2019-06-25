@@ -1,27 +1,28 @@
 <div class="col-md-7 form">
   <div class="form-head">
+      <img src="{{school3}}" alt="No school image" class="school-image">
     <h4>
-    Create New School
+    Fill the form below to create new school
     </h4>
   </div>
   <div class="col-md-11 form-body">
     <form [formGroup]="formData"  (ngSubmit)="createSchool(formData.value)">
-      <div class="form-group row">
-        <label for="name" class="col-sm-3 col-form-label"><strong>School Name <i class="text-danger"> *</i></strong> </label>
-        <div class="col-sm-9 input-group">
+      <div class="form-group">
+        <label for="name" class="col-form-label"><strong>School Name <i class="text-danger"> *</i></strong> </label>
+        <div class="input-group">
           <input type="text" formControlName="name" class="form-control-sm form-control" id="name" placeholder="school name">
         </div>
       </div>
 
-      <div class="form-group row">
-        <label for="regNumber" class="col-sm-3 col-form-label"><strong>Reg Number <i class="text-danger"> *</i></strong> </label>
-        <div class="col-sm-9 input-group">
+      <div class="form-group">
+        <label for="regNumber" class="col-form-label"><strong>Reg Number <i class="text-danger"> *</i></strong> </label>
+        <div class="input-group">
           <input type="text" formControlName="regNumber" class="form-control-sm form-control" id="regNumber" placeholder="Registration number">
         </div>
       </div>
 
       <div class="form-group row">
-        <label for="name" class="col-sm-3 col-form-label"><strong>Location <i class="text-danger"> *</i></strong> </label>
+        <label for="region" class="col-sm-3 col-form-label"><strong>Location <i class="text-danger"> *</i></strong> </label>
         <div class="col-sm-9 input-group">
           <div class="col-md-12">
               <div class="form-group row">
@@ -35,7 +36,6 @@
                       <option value="dodoma">Dodoma</option>
                       <option value="kigoma">Kigoma</option>
                       <option value="morogoro">Morogoro</option>
-
                   </select>
 
                   <select id="district" formControlName="district" class=" col-md-4 form-control form-control-sm">

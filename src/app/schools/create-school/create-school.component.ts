@@ -19,6 +19,10 @@ export class CreateSchoolComponent implements OnInit {
       private spinner: NgxSpinnerService,
       private route: Router,
   ) { }
+    school1 = '../assets/images/school.png';
+    school2 = '../assets/images/school2.png';
+    school3 = '../assets/images/school3.png';
+    school4 = '../assets/images/school4.png';
 
   ngOnInit() {
     this.formData = new FormGroup({
