@@ -44,4 +44,21 @@ export class SchoolsComponent implements OnInit {
         }
     );
   }
+  deleteSchool(schoolId) {
+      this.schoolService.deleteSchool(schoolId).subscribe(
+          response => {
+              $(document).ready(function() {
+                  $('#myTable').DataTable();
+              } );
+              this.schools = response.schools;
+              console.log(response);
+          }
+      );
+  }
+  editSchoolDetails() {
+      this.spinner.show();
+  }
+  schoolDetails() {
+      this.spinner.show();
+  }
 }
