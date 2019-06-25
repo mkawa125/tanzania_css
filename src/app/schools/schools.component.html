@@ -64,8 +64,8 @@
                   </thead>
 
                   <tbody>
-                  <tr *ngFor="let school of schools">
-                    <td>{{ num }}</td>
+                  <tr *ngFor="let school of schools; index as i">
+                    <td>{{ i+1}}</td>
                     <td>{{ school.name}}</td>
                     <td>{{ school.regNumber}}</td>
                     <td>{{ school.region}}</td>

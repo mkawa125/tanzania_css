@@ -12,7 +12,7 @@ declare var $;
 })
 export class SchoolsComponent implements OnInit {
   schools: Array<any>;
-  public num: number;
+  public num = 1;
 
   constructor(
       private   route: Router,
@@ -30,7 +30,6 @@ export class SchoolsComponent implements OnInit {
             $('#myTable').DataTable();
           } );
           this.schools = response.schools;
-          this.num = this.num += 1;
           console.log(this.schools);
           this.spinner.hide();
         }
