@@ -12,15 +12,13 @@ declare var $;
 })
 export class SchoolsComponent implements OnInit {
   schools: Array<any>;
+  public num: number;
 
   constructor(
       private   route: Router,
       private   spinner: NgxSpinnerService,
       private   schoolService: SchoolService,
   ) {
-    $(document).ready(function() {
-      $('#myTable').DataTable();
-    } );
   }
 
   ngOnInit() {
@@ -28,7 +26,11 @@ export class SchoolsComponent implements OnInit {
     this.schoolService.getAllPrimarySchools()
         .subscribe(
         response => {
+          $(document).ready(function() {
+            $('#myTable').DataTable();
+          } );
           this.schools = response.schools;
+          this.num = this.num += 1;
           console.log(this.schools);
           this.spinner.hide();
         }
