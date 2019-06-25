@@ -38,6 +38,14 @@
             <div class="col-md-12 content-head">
               <a class="btn btn-success"  routerLink="/schools/create"><i class="fa fa-plus-circle"></i> Add School</a>
             </div>
+            <ngx-spinner
+                    bdColor="rgba(51,51,51,0.8)"
+                    size="small"
+                    color="#fff"
+                    fullScreen = "false"
+                    type="line-scale-pulse-out">
+              <span>sending message...</span>
+            </ngx-spinner>
             <div class="col-md-12 content"  style="background-color: white">
               <a routerLink="/schools/primary" (click)="getPrimarySchools()">schools</a>
                 <table class="table table-sm table-striped table-bordered" id="myTable">
