@@ -1,120 +1,116 @@
 <div class="col-sm-11"
-     style="margin: 0 auto; background-color: whitesmoke; padding: 0; border: 1px solid lightsteelblue" xmlns="">
-    <div class="row" style="padding: 0 15px">
+     style="margin: 0 auto">
+    <div class="row">
       <div class="col-md-2  collapse in" id="sidebar" style="padding: 0">
       </div>
       <main class="col-md-12 col-xs-11 p-l-2 p-t-2">
-        <div class="row" style="padding: 25px">
-          <div class="col-sm-12">
-            <div class="row" style="background-color: white; padding: 1px">
-              <!--<div class="col-sm-3" style="margin-bottom: 25px">-->
-                <!--<div class="general-head">-->
-                  <!--<h4><strong><i class="fa fa-filter" style="float: left"></i> Advanced filter Options</strong></h4>-->
-                <!--</div>-->
-                <!--&lt;!&ndash;<div class="filters">&ndash;&gt;-->
-                  <!--&lt;!&ndash;<div class="filters-body">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<label for="schoolType"><strong>School Type</strong></label>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<form action="#" method="post">&ndash;&gt;-->
-                      <!--&lt;!&ndash;<select id="schoolType" formControlName="schoolType" name="schoolType" class="form-control">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<option value="All" selected>All</option>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<option value="Day">Day</option>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<option value="Boarding">Boarding</option>&ndash;&gt;-->
-                      <!--&lt;!&ndash;</select>&ndash;&gt;-->
+        <div class="row">
+          <!--<div class="col-sm-3" style="margin-bottom: 25px">-->
+            <!--<div class="general-head">-->
+              <!--<h4><strong><i class="fa fa-filter" style="float: left"></i> Advanced filter Options</strong></h4>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<div class="filters">&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="filters-body">&ndash;&gt;-->
+                <!--&lt;!&ndash;<label for="schoolType"><strong>School Type</strong></label>&ndash;&gt;-->
+                <!--&lt;!&ndash;<form action="#" method="post">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<select id="schoolType" formControlName="schoolType" name="schoolType" class="form-control">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="All" selected>All</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="Day">Day</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="Boarding">Boarding</option>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</select>&ndash;&gt;-->
 
-                      <!--&lt;!&ndash;<label for="gender"><strong>Gender Type</strong></label>&ndash;&gt;-->
-                      <!--&lt;!&ndash;<select id="gender" formControlName="gender" name="gender" class="form-control">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<option value="All" selected>All</option>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<option value="Core">Core</option>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<option value="Single">Single</option>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<option value="Girls">Girls</option>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<option value="Boys">Boys</option>&ndash;&gt;-->
-                      <!--&lt;!&ndash;</select>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<label for="gender"><strong>Gender Type</strong></label>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<select id="gender" formControlName="gender" name="gender" class="form-control">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="All" selected>All</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="Core">Core</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="Single">Single</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="Girls">Girls</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="Boys">Boys</option>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</select>&ndash;&gt;-->
 
-                      <!--&lt;!&ndash;<button class="btn btn-primary btn-block" style="font-size: small; padding: 4px; margin-top: 5px">Filter</button>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</form>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<button class="btn btn-primary btn-block" style="font-size: small; padding: 4px; margin-top: 5px">Filter</button>&ndash;&gt;-->
+                <!--&lt;!&ndash;</form>&ndash;&gt;-->
                 <!--&lt;!&ndash;</div>&ndash;&gt;-->
-              <!--</div>-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--</div>-->
 
-              <div class="col-sm-10 offset-1">
-                <div class="col-md-12 content-head">
-                  <a class="btn btn-success"  routerLink="/schools/create"><i class="fa fa-plus-circle"></i> Add School</a>
-                </div>
-                <div class="col-md-12 content">
-                  <a routerLink="/schools/primary" (click)="getPrimarySchools()">schools</a>
-                    <table class="table table-sm table-striped table-bordered" id="myTable">
-                      <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>RegNumber</th>
-                        <th>Location</th>
-                        <th>SchoolType</th>
-                        <th>GenderOrientation</th>
-                        <th>Actions</th>
-                      </tr>
-                      </thead>
+          <div class="col-sm-10 offset-1">
+            <div class="col-md-12 content-head">
+              <a class="btn btn-success"  routerLink="/schools/create"><i class="fa fa-plus-circle"></i> Add School</a>
+            </div>
+            <div class="col-md-12 content"  style="background-color: white">
+              <a routerLink="/schools/primary" (click)="getPrimarySchools()">schools</a>
+                <table class="table table-sm table-striped table-bordered" id="myTable">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>RegNumber</th>
+                    <th>Location</th>
+                    <th>SchoolType</th>
+                    <th>GenderOrientation</th>
+                    <th>Actions</th>
+                  </tr>
+                  </thead>
 
-                      <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Msata sec school</td>
-                        <td>s1968</td>
-                        <td>Bagamoyo</td>
-                        <td>Boarding</td>
-                        <td>core</td>
-                        <td>
-                          <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
-                          <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
-                          <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
-                        </td>
-                      </tr>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Msata sec school</td>
+                    <td>s1968</td>
+                    <td>Bagamoyo</td>
+                    <td>Boarding</td>
+                    <td>core</td>
+                    <td>
+                      <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
+                      <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
+                      <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
+                    </td>
+                  </tr>
 
-                      <tr>
-                        <td>2</td>
-                        <td>Msata sec school</td>
-                        <td>s1968</td>
-                        <td>Bagamoyo</td>
-                        <td>Boarding</td>
-                        <td>core</td>
-                        <td>
-                          <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
-                          <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
-                          <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
-                        </td>
-                      </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Msata sec school</td>
+                    <td>s1968</td>
+                    <td>Bagamoyo</td>
+                    <td>Boarding</td>
+                    <td>core</td>
+                    <td>
+                      <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
+                      <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
+                      <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
+                    </td>
+                  </tr>
 
-                      <tr>
-                        <td>3</td>
-                        <td>Msata sec school</td>
-                        <td>s1968</td>
-                        <td>Bagamoyo</td>
-                        <td>Boarding</td>
-                        <td>core</td>
-                        <td>
-                          <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
-                          <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
-                          <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
-                        </td>
-                      </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Msata sec school</td>
+                    <td>s1968</td>
+                    <td>Bagamoyo</td>
+                    <td>Boarding</td>
+                    <td>core</td>
+                    <td>
+                      <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
+                      <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
+                      <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
+                    </td>
+                  </tr>
 
-                      <tr>
-                        <td>4</td>
-                        <td>Msata sec school</td>
-                        <td>s1968</td>
-                        <td>Bagamoyo</td>
-                        <td>Boarding</td>
-                        <td>core</td>
-                        <td>
-                          <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
-                          <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
-                          <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
-                        </td>
-                      </tr>
-                      </tbody>
-                    </table>
-                </div>
-              </div>
+                  <tr>
+                    <td>4</td>
+                    <td>Msata sec school</td>
+                    <td>s1968</td>
+                    <td>Bagamoyo</td>
+                    <td>Boarding</td>
+                    <td>core</td>
+                    <td>
+                      <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
+                      <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
+                      <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
             </div>
           </div>
         </div>
