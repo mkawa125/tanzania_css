@@ -36,7 +36,14 @@
 
           <div class="col-sm-11" style="margin: 0 auto">
             <div class="col-md-12 content-head">
-              <a class="btn btn-success"  routerLink="/schools/create"><i class="fa fa-plus-circle"></i> Add School</a>
+              <div class="row">
+                <div class="col-md-10">
+                  <h5 style="float: left; font-size: small; font-weight: bold; padding: 5px">List Of Primary Schools</h5>
+                </div>
+                <div class="col-md-2">
+                  <a class="btn btn-success"  routerLink="/schools/create"><i class="fa fa-plus-circle"></i> Add School</a>
+                </div>
+              </div>
             </div>
             <ngx-spinner
                     bdColor="rgba(51,51,51,0.8)"
@@ -47,7 +54,6 @@
               <span>sending message...</span>
             </ngx-spinner>
             <div class="col-md-12 content"  style="background-color: white">
-              <a routerLink="/schools/primary" (click)="getPrimarySchools()">schools</a>
                 <table class="table table-sm table-striped table-bordered" id="myTable">
                   <thead>
                   <tr>
@@ -73,10 +79,10 @@
                     <td>{{ school.genderOrientation}}</td>
                     <td>{{ school.level}}</td>
                     <td>{{ school.ownership}}</td>
-                    <td>
-                      <a style="margin: 3px"><i class="fa fa-eye text-info"></i></a>
-                      <a style="margin: 3px" ><i class="fa fa-edit text-success"></i></a>
-                      <a style="margin: 3px" ><i class="fa fa-trash text-danger"></i></a>
+                    <td style="text-align: center">
+                      <a style="margin: 4px; cursor: pointer" (click)="schoolDetails(school.id)"><i class="fa fa-eye text-info"></i></a>
+                      <a style="margin: 4px; cursor: pointer" (click)="editSchoolDetails(school.id)" ><i class="fa fa-edit text-success"></i></a>
+                      <a style="margin: 4px; cursor: pointer" (click)="deleteSchool(school.id)"><i class="fa fa-trash text-danger"></i></a>
                     </td>
                   </tr>
                   </tbody>
