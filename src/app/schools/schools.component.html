@@ -62,9 +62,9 @@
                   </thead>
 
                   <tbody>
-                  <tr>
+                  <tr *ngFor="let school of schools">
                     <td>1</td>
-                    <td>Msata sec school</td>
+                    <td>{{ school.name}}</td>
                     <td>s1968</td>
                     <td>Bagamoyo</td>
                     <td>Boarding</td>

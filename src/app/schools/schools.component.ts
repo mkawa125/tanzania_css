@@ -11,6 +11,7 @@ declare var $;
   styleUrls: ['./schools.component.css']
 })
 export class SchoolsComponent implements OnInit {
+  schools: Array<any>;
 
   constructor(
       private   route: Router,
@@ -24,9 +25,11 @@ export class SchoolsComponent implements OnInit {
 
   ngOnInit() {
     this.spinner.show();
-    this.schoolService.getAllPrimarySchools().subscribe(
+    this.schoolService.getAllPrimarySchools()
+        .subscribe(
         response => {
-          console.log(response);
+          this.schools = response.schools;
+          console.log(this.schools);
           this.spinner.hide();
         }
     );
