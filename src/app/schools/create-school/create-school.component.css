@@ -6,14 +6,23 @@
     background-color: white;
     font-size: small;
     padding: 0;
+    border: 1px solid #CCD1D1;
 }
 .form-body{
     margin: 0 auto;
-    padding: 15px;
+    padding: 5px;
+}
+.form-inner{
+    padding: 15px 25px;
+    border: 1px solid #EBEDEF;
+    margin:  15px auto;
+    border-radius: 4px;
+
+
 }
 .form-head h4 {
     text-align: center;
-    padding: 15px;
+    padding: 5px;
     font-size: 14px;
     color: #555B5C;
     font-weight: bold;
@@ -53,7 +62,6 @@
     color: #555B5C;
 }
 .school-image{
-    width: 30px;
-    height: 30px;
-    margin: 0 auto;
+    width: 70px;
+    height: 60px;
 }

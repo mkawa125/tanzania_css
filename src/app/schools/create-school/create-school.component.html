@@ -1,12 +1,14 @@
 <div class="col-md-7 form">
   <div class="form-head">
-      <img src="{{school3}}" alt="No school image" class="school-image">
+      <div class="col-md-12" style="text-align: center">
+          <img src="{{school4}}" alt="No school image" class="school-image" style="margin: 0 auto">
+      </div>
     <h4>
     Fill the form below to create new school
     </h4>
   </div>
   <div class="col-md-11 form-body">
-    <form [formGroup]="formData"  (ngSubmit)="createSchool(formData.value)">
+    <form [formGroup]="formData"  (ngSubmit)="createSchool(formData.value)" class="form-inner">
       <div class="form-group">
         <label for="name" class="col-form-label"><strong>School Name <i class="text-danger"> *</i></strong> </label>
         <div class="input-group">
