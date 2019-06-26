@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SlickModule} from 'ngx-slick';
 import { HttpModule} from '@angular/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ProgressBarModule} from 'angular-progress-bar';
 
 // importing components
 import { HomeComponentComponent } from './home-component/home-component.component';
@@ -101,7 +102,8 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
       PerfectScrollbarModule,
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
-      ChartsModule
+      ChartsModule,
+      ProgressBarModule,
   ],
     providers: [
         MessageService,

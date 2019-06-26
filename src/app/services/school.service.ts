@@ -21,4 +21,14 @@ export class SchoolService {
         res => res.json()
     );
   }
+  getAllPrimarySchools() {
+    return this.http.get(this.server  + 'schools', this.options).map(
+        res => res.json()
+    );
+  }
+  deleteSchool(schoolId) {
+    return this.http.delete(this.server + 'schools/' + schoolId).map(
+        res => res.json(),
+    );
+  }
 }

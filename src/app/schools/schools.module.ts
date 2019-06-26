@@ -12,9 +12,9 @@ import { CreateSchoolComponent} from './create-school/create-school.component';
   imports: [
     CommonModule,
     SchoolsRoutingModule,
-      FormsModule,
-      ReactiveFormsModule,
-      NgxSpinnerModule
+    FormsModule,
+    ReactiveFormsModule,
+    NgxSpinnerModule
   ]
 })
 export class SchoolsModule { }

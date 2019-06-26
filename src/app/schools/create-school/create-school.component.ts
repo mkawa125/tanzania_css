@@ -3,6 +3,7 @@ import {FormGroup, Validator, FormControl, FormBuilder, Validators} from '@angul
 import { ToastrService} from 'ngx-toastr';
 import { SchoolService} from '../../services/school.service';
 import { NgxSpinnerService} from 'ngx-spinner';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'fmyp-create-school',
@@ -16,7 +17,12 @@ export class CreateSchoolComponent implements OnInit {
       private toast: ToastrService,
       private schoolService: SchoolService,
       private spinner: NgxSpinnerService,
+      private route: Router,
   ) { }
+    school1 = '../assets/images/school.png';
+    school2 = '../assets/images/school2.png';
+    school3 = '../assets/images/school3.png';
+    school4 = '../assets/images/school4.png';
 
   ngOnInit() {
     this.formData = new FormGroup({
@@ -33,14 +39,14 @@ export class CreateSchoolComponent implements OnInit {
       ward: new FormControl('', Validators.compose([
         Validators.required
       ])),
-      schoolName: new FormControl('', Validators.compose([
+      name: new FormControl('', Validators.compose([
           Validators.required,
       ])),
       level: new FormControl('', Validators.compose([
         Validators.required,
       ])),
 
-      gender: new FormControl('', Validators.compose([
+      genderOrientation: new FormControl('', Validators.compose([
         Validators.required,
       ])),
 
@@ -59,29 +65,26 @@ export class CreateSchoolComponent implements OnInit {
   }
 
   createSchool(formData) {
-    try {
-      this.spinner.show();
-      console.log(formData);
-      this.schoolService
-          .createSchool(formData)
-          .subscribe(response => {
-            console.log(response);
+    this.spinner.show();
+    this.schoolService.createSchool(formData)
+        .subscribe(
+            response => {
+              console.log(response);
+              this.spinner.hide();
+              this.toast.success('School Successfully added', 'School Created', {
+                timeOut: 1500,
+                positionClass: 'toast-top-right',
+                progressBar: true,
+              });
+              this.route.navigate(['/schools/secondary']);
+        },
+            error => { console.log(error);
             this.spinner.hide();
-            this.toast.success('School Successfully added', 'School Created', {
-              timeOut: 1500,
-              positionClass: 'toast-top-right',
-              progressBar: true,
-            });
-            this.formData.reset();
-          });
-    } catch (e) {
-      console.log(e);
-      this.spinner.hide();
-      this.toast.error('School Not Created', 'Failure', {
-        timeOut: 2000,
-        positionClass: 'toast-top-right',
-        progressBar: true,
-      });
-    }
+              this.toast.error('School Not Created', 'Failure', {
+                    timeOut: 2000,
+                    positionClass: 'toast-top-right',
+                    progressBar: true,
+              });
+        });
   }
 }

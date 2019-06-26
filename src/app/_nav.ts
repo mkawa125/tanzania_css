@@ -100,45 +100,45 @@ export const navItems: NavData[] = [
       },
     ]
   },
-  {
-    name: 'Exam Results',
-    url: '/notifications',
-    icon: 'fa fa-book',
-    children: [
-      {
-        name: 'Primary',
-        url: '/notifications/alerts',
-        icon: 'icon-bell'
-      },
-      {
-        name: 'O-level',
-        url: '/notifications/badges',
-        icon: 'icon-bell'
-      },
-      {
-        name: 'A-level',
-        url: '/notifications/modals',
-        icon: 'icon-bell'
-      }
-    ]
-  },
-  {
-    name: 'Admissions',
-    url: '/notifications',
-    icon: 'fa fa-tasks',
-    children: [
-      {
-        name: 'Primary',
-        url: '/notifications/alerts',
-        icon: 'icon-bell'
-      },
-      {
-        name: 'O-level',
-        url: '/notifications/badges',
-        icon: 'icon-bell'
-      },
-    ]
-  },
+  // {
+  //   name: 'Exam Results',
+  //   url: '/notifications',
+  //   icon: 'fa fa-book',
+  //   children: [
+  //     {
+  //       name: 'Primary',
+  //       url: '/notifications/alerts',
+  //       icon: 'icon-bell'
+  //     },
+  //     {
+  //       name: 'O-level',
+  //       url: '/notifications/badges',
+  //       icon: 'icon-bell'
+  //     },
+  //     {
+  //       name: 'A-level',
+  //       url: '/notifications/modals',
+  //       icon: 'icon-bell'
+  //     }
+  //   ]
+  // },
+  // {
+  //   name: 'Admissions',
+  //   url: '/notifications',
+  //   icon: 'fa fa-tasks',
+  //   children: [
+  //     {
+  //       name: 'Primary',
+  //       url: '/notifications/alerts',
+  //       icon: 'icon-bell'
+  //     },
+  //     {
+  //       name: 'O-level',
+  //       url: '/notifications/badges',
+  //       icon: 'icon-bell'
+  //     },
+  //   ]
+  // },
   {
     divider: true
   },
@@ -151,24 +151,25 @@ export const navItems: NavData[] = [
     url: '/about',
     icon: 'fa fa-history'
   },
-  {
-    name: 'Contacts',
-    url: '/contacts',
-    icon: 'fa fa-phone'
-  },
-  {
-    name: 'Setting',
-    url: '/charts',
-    icon: 'fa fa-cog'
-  },
-  {
-    name: 'my profile',
-    url: '/charts',
-    icon: 'fa fa-user-circle-o'
-  },
+  // {
+  //   name: 'Contacts',
+  //   url: '/contacts',
+  //   icon: 'fa fa-phone'
+  // },
+  // {
+  //   name: 'Setting',
+  //   url: '/charts',
+  //   icon: 'fa fa-cog'
+  // },
+  // {
+  //   name: 'my profile',
+  //   url: '/charts',
+  //   icon: 'fa fa-user-circle-o'
+  // },
   {
     name: 'Logout',
     url: '/login',
+    class: 'text-danger',
     icon: 'fa fa-sign-out'
   },
 ];
