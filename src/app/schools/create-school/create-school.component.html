@@ -1,14 +1,16 @@
 <div class="col-md-7 form">
   <div class="form-head">
       <div class="col-md-12" style="text-align: center">
-          <img src="{{school4}}" alt="No school image" class="school-image" style="margin: 0 auto">
+          <img src="{{school1}}" alt="No school image" class="school-image" style="margin: 0 auto">
       </div>
-    <h4>
+    <h4 style="font-family: cursive; color: #91BEE3">
     Fill the form below to create new school
     </h4>
   </div>
   <div class="col-md-11 form-body">
-    <form [formGroup]="formData"  (ngSubmit)="createSchool(formData.value)" class="form-inner">
+      <div class="form-outer" style="border: 1px solid #D6DBDF; padding: 2px; margin: 15px auto; border-radius: 4px; background-color: whitesmoke">
+    <form [formGroup]="formData"  (ngSubmit)="createSchool(formData.value)" class="form-inner" style="margin: 0; background-color: white">
+
       <div class="form-group">
         <label for="name" class="col-form-label"><strong>School Name <i class="text-danger"> *</i></strong> </label>
         <div class="input-group">
@@ -29,7 +31,7 @@
                     <label for="region" class=" col-form-label"><strong>Region <i class="text-danger"> *</i></strong> </label>
                     <div class="form-group">
                         <select id="region" formControlName="region" class="form-control form-control-sm">
-                            <option value="" selected>--choose region--</option>
+                            <option value="" selected>choose region</option>
                             <option value="Dar es salaam">Dar es salaam</option>
                             <option value="arusha">Arusha</option>
                             <option value="pwani">Pwani</option>
@@ -47,7 +49,7 @@
                     <label for="district" class="col-form-label"><strong>District <i class="text-danger"> *</i></strong> </label>
                     <div class="form-group">
                         <select id="district" formControlName="district" class="form-control form-control-sm">
-                            <option value="" selected>--choose region--</option>
+                            <option value="" selected>choose region</option>
                             <option value="bagamoyo">Bagaamoyo</option>
                             <option value="muheza">Muheza</option>
                             <option value="chalinze">Chalinze</option>
@@ -61,7 +63,7 @@
                     <label for="ward" class=" col-form-label"><strong>Location <i class="text-danger"> *</i></strong> </label>
                     <div class="form-group">
                         <select id="ward" formControlName="ward" class="form-control form-control-sm">
-                            <option value="" selected>--choose region--</option>
+                            <option value="" selected>choose region</option>
                             <option value="msata">Msata</option>
                             <option value="kiwangwa">Kiwangwa</option>
                             <option value="dunda">Dunda</option>
@@ -75,7 +77,7 @@
 
       <div class="form-group">
         <label for="level" class="col-form-label"><strong> Level <i class="text-danger"> *</i></strong> </label>
-        <div class="col-sm-9 input-group">
+        <div class="input-group">
             <div class="form-check-inline">
                 <label class="form-check-label">
                     <input type="checkbox" class="form-check-input" name="level" formControlName="level" id="level" value="primary">Primary
@@ -94,74 +96,65 @@
         </div>
       </div>
 
-      <div class="form-group row">
-        <label for="name" class="col-sm-3 col-form-label"><strong>Gender type <i class="text-danger"> *</i></strong> </label>
-        <div class="col-sm-9 input-group">
-            <div class="form-check-inline">
-                <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="genderOrientation" formControlName="genderOrientation" id="gender" value="core"> Core
-                </label>
-            </div>
-            <div class="form-check-inline">
-                <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="genderOrientation" formControlName="genderOrientation" value="boys"> Boys
-                </label>
-            </div>
-            <div class="form-check-inline">
-                <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="genderOrientation" formControlName="genderOrientation" value="girls"> Girls
-                </label>
-            </div>
-        </div>
-      </div>
-
-        <div class="form-group row">
-            <label for="dateStarted" class="col-sm-3 col-form-label"><strong>Date started <i class="text-danger"> *</i></strong> </label>
-            <div class="col-sm-9 input-group">
+        <div class="form-group">
+            <label for="dateStarted" class="col-form-label"><strong>Date started <i class="text-danger"> *</i></strong> </label>
+            <div class=" input-group">
                 <input type="date" formControlName="dateStarted" class="form-control-sm form-control" id="dateStarted" placeholder="Date started">
             </div>
         </div>
 
-        <div class="form-group row">
-            <label for="name" class="col-sm-3 col-form-label"><strong>Ownership <i class="text-danger"> *</i></strong> </label>
-            <div class="col-sm-9">
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="ownership" formControlName="ownership" value="public"> Public school
-                    </label>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="genderOrientation" class=" col-form-label"><strong>Gender Type <i class="text-danger"> *</i></strong> </label>
+                    <div class="form-group">
+                        <select id="genderOrientation" formControlName="genderOrientation" class="form-control form-control-sm">
+                            <option value="" selected>choose gender</option>
+                            <option value="Dar es salaam">Core</option>
+                            <option value="arusha">Boys</option>
+                            <option value="pwani">Girls</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="ownership" formControlName="ownership" value="private"> Private school
-                    </label>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="ownership" class="col-form-label"><strong>Ownership <i class="text-danger"> *</i></strong> </label>
+                    <div class="form-group">
+                        <select id="ownership" formControlName="ownership" class="form-control form-control-sm">
+                            <option value="" selected>choose ownership</option>
+                            <option value="public">Public</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="schoolType" class=" col-form-label"><strong>School Type <i class="text-danger"> *</i></strong> </label>
+                    <div class="form-group">
+                        <select id="schoolType" formControlName="schoolType" class="form-control form-control-sm">
+                            <option value="" selected>school type</option>
+                            <option value="day">Day School</option>
+                            <option value="boarding">Boarding school</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="form-group row">
-            <label for="name" class="col-sm-3 col-form-label"><strong>School Type <i class="text-danger"> *</i></strong> </label>
-            <div class="col-sm-9">
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="schoolType" formControlName="schoolType" value="day"> Day school
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="schoolType" formControlName="schoolType" value="boarding"> Boarding school
-                    </label>
-                </div>
-            </div>
-        </div>
 
-      <div class="form-group row">
-        <label for="name" class="col-sm-3 col-form-label"> </label>
-        <div class="col-sm-9 input-group">
-          <button class="btn btn-block btn-success" type="submit"> Save
+      <div class="form-group">
+        <label for="name" class="col-form-label"> </label>
+        <div class="input-group">
+          <button class="btn btn-block btn-success" type="submit" style="font-family: cursive"> Register
               <ngx-spinner></ngx-spinner>
           </button>
         </div>
       </div>
+
     </form>
+      </div>
   </div>
 </div>

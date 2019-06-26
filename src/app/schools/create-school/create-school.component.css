@@ -12,11 +12,18 @@
     margin: 0 auto;
     padding: 5px;
 }
+.form-body .form-outer{
+    border: 1px solid lightsteelblue;
+    padding: 1px;
+    margin: 15px auto;
+}
+
 .form-inner{
     padding: 15px 20px;
     border: 1px solid #EBEDEF;
-    margin:  15px auto;
+    /*margin:  15px auto;*/
     border-radius: 4px;
+    background-color: white;
 }
 .form-inner .form-group{
     margin-bottom: 0;
