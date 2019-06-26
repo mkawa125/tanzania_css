@@ -13,12 +13,19 @@
     padding: 5px;
 }
 .form-inner{
-    padding: 15px 25px;
+    padding: 15px 20px;
     border: 1px solid #EBEDEF;
     margin:  15px auto;
     border-radius: 4px;
-
-
+}
+.form-inner .form-group{
+    margin-bottom: 0;
+}
+.form-inner .form-group .input-group .form-control{
+    margin-bottom: 0;
+    font-family: cursive;
+    font-size: 14px;
+    border: 1px solid #D6DBDF;
 }
 .form-head h4 {
     text-align: center;
