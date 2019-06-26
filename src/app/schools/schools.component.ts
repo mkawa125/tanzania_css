@@ -54,7 +54,7 @@ export class SchoolsComponent implements OnInit {
               } );
               this.schools = response.schools;
               this.toast.warning('', 'School Deleted Successfully', {
-                  timeOut: 1500,
+                  timeOut: 2000,
                   positionClass: 'toast-top-center',
                   progressBar: false,
               });
