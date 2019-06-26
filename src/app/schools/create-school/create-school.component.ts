@@ -11,8 +11,15 @@ import { Router} from '@angular/router';
   styleUrls: ['./create-school.component.css']
 })
 export class CreateSchoolComponent implements OnInit {
-  formData; name; regNumber;
-
+  formData;
+  name;
+  regNumber;
+  schoolForm: FormGroup;
+  schoolLevel = [
+      { id: 1, genre: 'Pop' },
+      { id: 2, genre: 'Rock' },
+      { id: 4, genre: 'Hiphop' }
+  ];
   constructor(
       private toast: ToastrService,
       private schoolService: SchoolService,
