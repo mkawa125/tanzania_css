@@ -63,7 +63,7 @@ export const navItems: NavData[] = [
   },
   {
     name: 'Students',
-    url: '/buttons',
+    url: '/students',
     icon: 'fa fa-graduation-cap',
   },
   {

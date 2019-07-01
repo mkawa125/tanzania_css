@@ -12,7 +12,6 @@ import { ProgressBarModule} from 'angular-progress-bar';
 // importing components
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
-import { StudentDetailsComponent } from './student-details/student-details.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MainComponent } from './main/main.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
@@ -65,7 +64,6 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
       AppComponent,
       HomeComponentComponent,
       PasswordResetComponent,
-      StudentDetailsComponent,
       MainComponent,
       CreateStaffComponent,
       SideMenuComponent,
