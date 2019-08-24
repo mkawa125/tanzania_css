@@ -1,14 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes} from '@angular/router';
 import { ToastrModule} from 'ngx-toastr';
-import { LoginComponentComponent } from './login-component/login-component.component';
 
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SlickModule} from 'ngx-slick';
 import { HttpModule} from '@angular/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ProgressBarModule} from 'angular-progress-bar';
 
 // importing components
 import { HomeComponentComponent } from './home-component/home-component.component';
@@ -28,7 +27,6 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 // core ui modules
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 // Import containers
 import { DefaultLayoutComponent } from './containers';
@@ -37,6 +35,7 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { LoginComponentModule} from './login-component/login-component.module';
 
 
 const APP_CONTAINERS = [
@@ -64,7 +63,6 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
 @NgModule({
   declarations: [
       AppComponent,
-      LoginComponentComponent,
       HomeComponentComponent,
       PasswordResetComponent,
       StudentDetailsComponent,
@@ -81,6 +79,7 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
   ],
   imports: [
       BrowserModule,
+      LoginComponentModule,
       BrowserAnimationsModule,
       FormsModule,
       ReactiveFormsModule,
@@ -103,7 +102,8 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
       PerfectScrollbarModule,
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
-      ChartsModule
+      ChartsModule,
+      ProgressBarModule,
   ],
     providers: [
         MessageService,

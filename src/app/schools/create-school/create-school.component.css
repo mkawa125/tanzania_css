@@ -6,20 +6,44 @@
     background-color: white;
     font-size: small;
     padding: 0;
+    border: 1px solid #CCD1D1;
 }
 .form-body{
     margin: 0 auto;
-    padding: 15px;
+    padding: 5px;
+}
+.form-body .form-outer{
+    border: 1px solid lightsteelblue;
+    padding: 1px;
+    margin: 15px auto;
+}
+
+.form-inner{
+    padding: 15px 20px;
+    border: 1px solid #EBEDEF;
+    /*margin:  15px auto;*/
+    border-radius: 4px;
+    background-color: white;
+}
+.form-inner .form-group{
+    margin-bottom: 0;
+}
+.form-inner .form-group .input-group .form-control{
+    margin-bottom: 0;
+    font-family: cursive;
+    font-size: 14px;
+    border: 1px solid #D6DBDF;
 }
 .form-head h4 {
     text-align: center;
-    padding: 15px;
+    padding: 5px;
     font-size: 14px;
-    color: white;
+    color: #555B5C;
     font-weight: bold;
 }
 .form-head{
-    background-color: rebeccapurple;
+    padding: 15px;
+    border-bottom: 2px solid #555B5C;
 }
 .input-group input.form-control{
     font-size: small;
@@ -46,4 +70,12 @@
 }
 .form-check label.form-check-label input.form-check-input{
     margin-right: 415px;
+}
+.col-form-label{
+    font-family: cursive;
+    color: #555B5C;
+}
+.school-image{
+    width: 70px;
+    height: 60px;
 }

@@ -17,8 +17,18 @@ export class SchoolService {
   }
   createSchool(formData) {
     const data = JSON.stringify(formData);
-    return this.http.post(this.server + 'createSchool', data, this.options).map(
+    return this.http.post(this.server + 'schools', data, this.options).map(
         res => res.json()
+    );
+  }
+  getAllPrimarySchools() {
+    return this.http.get(this.server  + 'schools', this.options).map(
+        res => res.json()
+    );
+  }
+  deleteSchool(schoolId) {
+    return this.http.delete(this.server + 'schools/' + schoolId).map(
+        res => res.json(),
     );
   }
 }

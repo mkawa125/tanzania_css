@@ -2,18 +2,21 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SchoolsComponent} from './schools.component';
 import { CreateSchoolComponent} from './create-school/create-school.component';
+import {AuthGuard} from '../guards/auth.guard';
 
 
 const routes: Routes = [
   {
     path: '',
+    canActivate: [AuthGuard],
     data: {
       title: 'Schools'
     },
     children: [
       {
         path: '',
-        redirectTo: 'schools'
+        redirectTo: 'schools',
+        component: SchoolsComponent,
       },
       {
         path: 'primary',

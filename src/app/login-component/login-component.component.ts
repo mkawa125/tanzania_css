@@ -66,4 +66,13 @@ export class LoginComponentComponent implements OnInit {
               }
           );
   }
+    logout() {
+        this.login.logout().subscribe(
+            response => console.log(response),
+            error => console.log(error),
+            () => {
+                this.router.navigate(['/login']);
+            }
+        );
+    }
 }
