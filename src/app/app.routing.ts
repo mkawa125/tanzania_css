@@ -102,7 +102,7 @@ export const routes: Routes = [
       },
       {
         path: 'regions',
-        loadChildren: './locations/locations.module#LocationsModule'
+        loadChildren: './locations/regions/regions.module#RegionsModule'
       },
     ]
   },
