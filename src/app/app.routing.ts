@@ -100,6 +100,10 @@ export const routes: Routes = [
         path: 'about',
         loadChildren: './about/about.module#AboutModule'
       },
+      {
+        path: 'regions',
+        loadChildren: './about/about.module#AboutModule'
+      },
     ]
   },
   { path: '**', component: P404Component }

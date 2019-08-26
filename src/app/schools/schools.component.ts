@@ -12,7 +12,7 @@ declare var $;
   styleUrls: ['./schools.component.css']
 })
 export class SchoolsComponent implements OnInit {
-  schools: Array<any>;
+  schools: Object<any>;
   public num = 1;
 
   constructor(
@@ -31,7 +31,7 @@ export class SchoolsComponent implements OnInit {
           $(document).ready(function() {
             $('#myTable').DataTable();
           } );
-          this.schools = response.schools;
+          this.schools = response.data;
           console.log(this.schools);
           this.spinner.hide();
         }

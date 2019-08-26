@@ -40,7 +40,12 @@ export const navItems: NavData[] = [
     name: 'MANAGEMENT'
   },
   {
-    name: 'School',
+    name: 'Regions',
+    url: '/regions',
+    icon: 'fa fa-map',
+  },
+  {
+    name: 'Schools',
     url: '/schools',
     icon: 'fa fa-university',
     children: [
