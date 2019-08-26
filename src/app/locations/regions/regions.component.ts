@@ -24,6 +24,15 @@ export class RegionsComponent implements OnInit {
   }
   ngOnInit() {
     this.spinner.show();
+    this.locaionService.getAllRegions()
+        .subscribe(response => {
+          $(document).ready(function() {
+            $('#myTable').DataTable();
+          } );
+          this.regions = response.data;
+          console.log(this.regions);
+          this.spinner.hide();
+        });
   }
 
 }
