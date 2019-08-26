@@ -12,7 +12,7 @@ declare var $;
   styleUrls: ['./schools.component.css']
 })
 export class SchoolsComponent implements OnInit {
-  schools: Object<any>;
+  schools: Array<any>;
   public num = 1;
 
   constructor(
