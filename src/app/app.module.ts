@@ -56,6 +56,10 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { LocationsComponent } from './locations/locations.component';
+import { RegionsComponent } from './locations/regions/regions.component';
+import { DistrictsComponent } from './locations/districts/districts.component';
+import { WardsComponent } from './locations/wards/wards.component';
 
 const server_address = 'http://127.0.0.1:8000/api/v1/';
 
@@ -72,7 +76,11 @@ const server_address = 'http://127.0.0.1:8000/api/v1/';
       P404Component,
       P500Component,
       LoginComponent,
-      RegisterComponent
+      RegisterComponent,
+      LocationsComponent,
+      RegionsComponent,
+      DistrictsComponent,
+      WardsComponent
 
   ],
   imports: [
