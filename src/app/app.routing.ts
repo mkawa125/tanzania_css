@@ -69,6 +69,10 @@ export const routes: Routes = [
         loadChildren: './schools/schools.module#SchoolsModule'
       },
       {
+        path: 'students',
+        loadChildren: './student-details/student-details.module#StudentDetailsModule'
+      },
+      {
         path: 'dashboard',
         loadChildren: './views/dashboard/dashboard.module#DashboardModule'
       },
@@ -95,6 +99,14 @@ export const routes: Routes = [
       {
         path: 'about',
         loadChildren: './about/about.module#AboutModule'
+      },
+      {
+        path: 'regions',
+        loadChildren: './locations/regions/regions.module#RegionsModule'
+      },
+      {
+        path: 'logout',
+        loadChildren: './login-component/login-component.module#LoginComponentModule'
       },
     ]
   },

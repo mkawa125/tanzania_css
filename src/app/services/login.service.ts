@@ -51,12 +51,12 @@ export class LoginService {
       }
       return false;
   }
-    checkAuth() {
-        if (localStorage.getItem('token')) {
-            this.isLoggedIn = true;
-            return true;
-        }
-        return false;
+  checkAuth() {
+      if (localStorage.getItem('token')) {
+          this.isLoggedIn = true;
+          return true;
+      }
+      return false;
     }
   logout() {
       return this.http.get(
