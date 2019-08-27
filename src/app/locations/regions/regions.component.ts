@@ -18,13 +18,14 @@ export class RegionsComponent implements OnInit {
   constructor(
       private   route: Router,
       private   spinner: NgxSpinnerService,
-      private   locaionService: LocationsService,
+      private   locationService: LocationsService,
       private toast: ToastrService,
   ) {
   }
   ngOnInit() {
     this.spinner.show();
-    this.locaionService.getAllRegions()
+      // localStorage.removeItem('token');
+    this.locationService.getAllRegions()
         .subscribe(response => {
           $(document).ready(function() {
             $('#myTable').DataTable();

@@ -9,6 +9,13 @@ const routes: Routes = [
     data: {
       title: 'About TCSS'
     }
+  },
+  {
+    path: 'logout',
+    component: LoginComponentComponent,
+    data: {
+      title: 'About TCSS'
+    }
   }
 ];
 

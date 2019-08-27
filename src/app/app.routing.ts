@@ -104,6 +104,10 @@ export const routes: Routes = [
         path: 'regions',
         loadChildren: './locations/regions/regions.module#RegionsModule'
       },
+      {
+        path: 'logout',
+        loadChildren: './login-component/login-component.module#LoginComponentModule'
+      },
     ]
   },
   { path: '**', component: P404Component }

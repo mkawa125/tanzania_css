@@ -90,7 +90,7 @@ export const navItems: NavData[] = [
   },
   {
     name: 'Logout',
-    url: '/login',
+    url: '/logout',
     class: 'text-danger',
     icon: 'fa fa-sign-out'
   },
